@@ -11,7 +11,9 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Helmet>My Page</Helmet>
+        <Helmet>
+          <title>My Page</title>
+        </Helmet>
           <Navigation />
           <Switch>
             <Route path="/" component={Home} exact />
