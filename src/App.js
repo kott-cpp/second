@@ -5,18 +5,20 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
+import Helmet from "react-helmet";
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <Navigation />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route component={Error} />
-        </Switch>
+        <Helmet>My Page</Helmet>
+          <Navigation />
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route component={Error} />
+          </Switch>
       </div>
     </BrowserRouter>
   );
