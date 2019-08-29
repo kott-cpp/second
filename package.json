@@ -32,5 +32,6 @@
     ]
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.10.2"
   }
 }
