@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, render } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -8,7 +8,7 @@ import Navigation from "./components/Navigation";
 import Helmet from "react-helmet";
 import ApolloClient from 'apollo-boost';
 import { gql } from 'apollo-boost';
-import { ApolloProvider, useQuery } from '@apollo/react/hooks';
+import { ApolloProvider, useQuery } from "@apollo/react-hooks";
 
 
 const client = new ApolloClient({
@@ -34,15 +34,29 @@ client.query({
 })
   .then(result => console.log(result.data.Starship.pilots[0]));
 
-function pilotName() {
-  const { data } = useQuery(
- 
-);
-  return data.Starship.pilots.map(({ pilot, name }) => (
-    <div key={pilot}>
-      <p>
-        {pilot}: {name}
-      </p>
+function PilotName() {
+  const { loading, error, data } =useQuery(gql`
+      {
+          Starship(name: "Millennium Falcon") {
+              name
+                pilots {
+                  name
+                  height
+              }
+          }
+      }`
+  );
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Erroe :(</p>;
+
+  return data.Starship.pilots.map(({ name, height }) => (
+    <div>
+      <ul>
+        <li>
+          Name: {name} - Height: {height}cm
+        </li>
+      </ul>
     </div>
   ))
 }
@@ -56,18 +70,17 @@ function App() {
             <title>My Page</title>
           </Helmet>
             <Navigation />
-            {pilotName}
             <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
               <Route component={Error} />
             </Switch>
+          <PilotName />
         </div>
-    </BrowserRouter>
+      </BrowserRouter>
     </ApolloProvider>
   );
-  // render(<App />, document.getElementById('root'));
 }
 
 export default App;
