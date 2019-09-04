@@ -36,6 +36,8 @@
     ]
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.10.2"
+    "@fortawesome/fontawesome-pro": "^5.10.2",
+    "eslint": "^6.3.0",
+    "eslint-plugin-react": "^7.14.3"
   }
 }
