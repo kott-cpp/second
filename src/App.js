@@ -42,6 +42,9 @@ function PilotName() {
                 pilots {
                   name
                   height
+                  homeworld {
+                      name
+                  }
               }
           }
       }`
@@ -50,11 +53,11 @@ function PilotName() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Erroe :(</p>;
 
-  return data.Starship.pilots.map(({ name, height }) => (
+  return data.Starship.pilots.map(({ name, height, homeworld.name }) => (
     <div>
       <ul>
         <li>
-          Name: {name} - Height: {height}cm
+          Name: {name} - Height: {height}cm - {homeworld,name}
         </li>
       </ul>
     </div>
