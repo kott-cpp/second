@@ -20,11 +20,12 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react",
       "prettier"
     ],
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "semi": 0,
+        "quotes": ["error", "double"],
+        "indent": ["error", 2],
+        "comma-dangle": ["error", "always"]
     }
 };

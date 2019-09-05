@@ -1,18 +1,18 @@
-import React from "react";
-import { BrowserRouter, Route, Switch, render } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Error from "./components/Error";
-import Navigation from "./components/Navigation";
-import Helmet from "react-helmet";
-import ApolloClient from "apollo-boost";
-import { gql } from "apollo-boost";
-import { ApolloProvider, useQuery } from "@apollo/react-hooks";
+import React from 'react'
+import { BrowserRouter, Route, Switch, render } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
+import Error from './components/Error'
+import Navigation from './components/Navigation'
+import Helmet from 'react-helmet'
+import ApolloClient from 'apollo-boost'
+import { gql } from 'apollo-boost'
+import { ApolloProvider, useQuery } from '@apollo/react-hooks'
 
 const client = new ApolloClient({
-  uri: "https://api.graphcms.com/simple/v1/swapi"
-});
+  uri: 'https://api.graphcms.com/simple/v1/swapi',
+})
 
 client
   .query({
@@ -30,9 +30,9 @@ client
           }
         }
       }
-    `
+    `,
   })
-  .then(result => console.log(result.data.Starship.pilots[0]));
+  .then(result => console.log(result.data.Starship.pilots[0]))
 
 function PilotName() {
   const { loading, error, data } = useQuery(gql`
@@ -42,23 +42,26 @@ function PilotName() {
         pilots {
           name
           height
+          homeworld {
+            name
+          }
         }
       }
     }
-  `);
+  `)
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error :(</p>
 
-  return data.Starship.pilots.map(({ name, height }) => (
+  return data.Starship.pilots.map(({ name, height, homeworld }) => (
     <div>
       <ul>
         <li>
-          Name: {name} - Height: {height}cm
+          Name: {name} - Height: {height}cm -{homeworld.name}
         </li>
       </ul>
     </div>
-  ));
+  ))
 }
 
 function App() {
@@ -80,7 +83,7 @@ function App() {
         </div>
       </BrowserRouter>
     </ApolloProvider>
-  );
+  )
 }
 
-export default App;
+export default App

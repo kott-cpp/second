@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "../button.module.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from '../button.module.css'
 
 const Navigation = () => {
   return (
@@ -15,7 +15,7 @@ const Navigation = () => {
         Contact
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
