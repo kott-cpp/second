@@ -17,37 +17,52 @@ const client = new ApolloClient({
 client
   .query({
     query: gql`
-      {
-        Starship(name: "Millennium Falcon") {
-          name
-          hyperdriveRating
-          pilots(orderBy: height_DESC) {
-            name
-            height
-            homeworld {
-              name
+        {
+            Starship(name: "Millennium Falcon") {
+                name
+                hyperdriveRating
+
+                pilots(orderBy: height_DESC) {
+                    name
+                    height
+                    homeworld {
+                        name
+                    }
+                    species {
+                        name
+                    }
+                    films {
+                        title
+                    }
+                }
             }
-          }
         }
-      }
     `,
   })
   .then(result => console.log(result.data.Starship.pilots[0]))
 
 function PilotName() {
   const { loading, error, data } = useQuery(gql`
-    {
-      Starship(name: "Millennium Falcon") {
-        name
-        pilots {
-          name
-          height
-          homeworld {
-            name
+      {
+          Starship(name: "Millennium Falcon") {
+              name
+              hyperdriveRating
+
+              pilots(orderBy: height_DESC) {
+                  name
+                  height
+                  homeworld {
+                      name
+                  }
+                  species {
+                      name
+                  }
+                  films {
+                      title
+                  }
+              }
           }
-        }
       }
-    }
   `)
 
   if (loading) return <p>Loading...</p>
