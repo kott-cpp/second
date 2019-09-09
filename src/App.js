@@ -21,7 +21,6 @@ client
             Starship(name: "Millennium Falcon") {
                 name
                 hyperdriveRating
-
                 pilots(orderBy: height_DESC) {
                     name
                     height
@@ -47,7 +46,6 @@ function PilotName() {
           Starship(name: "Millennium Falcon") {
               name
               hyperdriveRating
-
               pilots(orderBy: height_DESC) {
                   name
                   height
