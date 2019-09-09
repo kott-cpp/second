@@ -11,73 +11,60 @@ import { gql } from 'apollo-boost'
 import { ApolloProvider, useQuery } from '@apollo/react-hooks'
 
 const client = new ApolloClient({
-  uri: 'https://api.graphcms.com/simple/v1/swapi',
+  uri: 'http://localhost:3000/graphql',
 })
 
 client
   .query({
     query: gql`
         {
-            Starship (name: "Millennium Falcon") {
-                name
-                hyperdriveRating
-                pilots(orderBy: height_DESC) {
-                    name
-                    height
-                    homeworld {
-                        name
+            patchPanel(patchPanelId: 1) {
+                panelJacks {
+                    nodes {
+                        id
                     }
-                    species {
-                        name
-                    }
-                    films {
-                        title
+                }
+                switchPorts {
+                    nodes {
+                        id
                     }
                 }
             }
         }
     `,
   })
-  // .then(result => console.log(result.data.allStarship))
-
-function PilotName() {
+/*
+function PanelJacks() {
   const { loading, error, data } = useQuery(gql`
-      {
-          Starship (name: "Millennium Falcon") {
-              name
-              hyperdriveRating
-              pilots(orderBy: height_DESC) {
-                  name
-                  height
-                  homeworld {
-                      name
-                  }
-                  species {
-                      name
-                  }
-                  films {
-                      title
-                  }
-              }
-          }
+  {
+    panelJacks {
+      nodes {
+        id
       }
-  `)
+    }
+    switchPorts {
+      nodes {
+        id
+      }
+    }
+
+  }
+  )
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
-
-
-  return data.Starship.pilots.map(({ name, height, homeworld }) => (
+  return data.panelJacks.nodes.map(({ id }) => (
     <div>
       <ul>
         <li>
-          Name: {name} - Height: {height}cm -{homeworld.name}
+          Name: {id}
         </li>
       </ul>
     </div>
   ))
 }
-
+}
+*/
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -93,7 +80,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route component={Error} />
           </Switch>
-          <PilotName />
+          {/*<PanelJacks/>*/}
         </div>
       </BrowserRouter>
     </ApolloProvider>
