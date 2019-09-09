@@ -18,7 +18,7 @@ client
   .query({
     query: gql`
         {
-            Starship(name: "Millennium Falcon") {
+            Starship (name: "Millennium Falcon") {
                 name
                 hyperdriveRating
                 pilots(orderBy: height_DESC) {
@@ -38,12 +38,12 @@ client
         }
     `,
   })
-  .then(result => console.log(result.data.Starship.pilots[0]))
+  // .then(result => console.log(result.data.allStarship))
 
 function PilotName() {
   const { loading, error, data } = useQuery(gql`
       {
-          Starship(name: "Millennium Falcon") {
+          Starship (name: "Millennium Falcon") {
               name
               hyperdriveRating
               pilots(orderBy: height_DESC) {
@@ -65,6 +65,7 @@ function PilotName() {
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
+
 
   return data.Starship.pilots.map(({ name, height, homeworld }) => (
     <div>
