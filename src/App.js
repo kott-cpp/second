@@ -11,72 +11,64 @@ import { gql } from 'apollo-boost'
 import { ApolloProvider, useQuery } from '@apollo/react-hooks'
 
 const client = new ApolloClient({
+  // uri: 'https://graphiql.graphcms.com/simple/v1/swapi',
   uri: 'http://localhost:3000/graphql',
 })
 
-client
-  .query({
-    query: gql`
-        {
-            patchPanel(patchPanelId: 1) {
-                panelJacks {
-                    nodes {
-                        id
-                    }
-                }
-                switchPorts {
-                    nodes {
-                        id
-                    }
-                }
-            }
+client.query({
+  query: gql`
+    {
+      patchPanel(patchPanelId: 1) {
+        panelJacks {
+          nodes {
+            id
+          }
         }
-    `,
-  })
-
-const Mutation = new GraphQLObjectType({
-  name: 'Mutation',
-  field: panel_jack, Types: PanelJack, null: true
-  field: switch_port, Types: SwitchPort, null, true
-
-  argument: panel_jack_id, ID, required: true
-  argument: switch_port_id, ID, required: true
-
-
-  resolve(panel_jack_id:, switch_port_id)
+        switchPorts {
+          nodes {
+            id
+          }
+        }
+      }
+    }
+  `,
 })
-/*
-function PanelJacks() {
-  const { loading, error, data } = useQuery(gql`
-  {
-    panelJacks {
-      nodes {
-        id
-      }
-    }
-    switchPorts {
-      nodes {
-        id
-      }
-    }
 
-  }
-  )
+// .then(result => console.log(result.patchPanel.panelJacks.nodes[0].id))
+
+function PortJackPair() {
+  const { loading, error, data } = useQuery(gql`
+    {
+      patchPanel(patchPanelId: 1) {
+        panelJacks {
+          nodes {
+            id
+          }
+        }
+        switchPorts {
+          nodes {
+            id
+          }
+        }
+      }
+    }
+  `)
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
-  return data.panelJacks.nodes.map(({ id }) => (
+
+  // const panelJack = data.patchPanel.panelJacks.nodes.map(id)
+  // console.log("panelJacks", panelJack)
+
+  return data.patchPanel.panelJacks.nodes.map(({ id }) => (
     <div>
       <ul>
-        <li>
-          Name: {id}
-        </li>
+        <li>Jack: {id}</li>
       </ul>
     </div>
   ))
 }
-}
-*/
+
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -92,7 +84,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route component={Error} />
           </Switch>
-          {/*<PanelJacks/>*/}
+          <PortJackPair />
         </div>
       </BrowserRouter>
     </ApolloProvider>
