@@ -33,6 +33,18 @@ client
         }
     `,
   })
+
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  field: panel_jack, Types: PanelJack, null: true
+  field: switch_port, Types: SwitchPort, null, true
+
+  argument: panel_jack_id, ID, required: true
+  argument: switch_port_id, ID, required: true
+
+
+  resolve(panel_jack_id:, switch_port_id)
+})
 /*
 function PanelJacks() {
   const { loading, error, data } = useQuery(gql`
