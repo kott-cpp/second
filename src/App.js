@@ -36,7 +36,7 @@ client.query({
 
 // .then(result => console.log(result.patchPanel.panelJacks.nodes[0].id))
 
-function PortJackPair() {
+function Jacks() {
   const { loading, error, data } = useQuery(gql`
     {
       patchPanel(patchPanelId: 1) {
@@ -60,13 +60,21 @@ function PortJackPair() {
   // const panelJack = data.patchPanel.panelJacks.nodes.map(id)
   // console.log("panelJacks", panelJack)
 
-  return data.patchPanel.panelJacks.nodes.map(({ id }) => (
+  return data.patchPanel.switchPorts.nodes.map(({ id }) => (
     <div>
       <ul>
-        <li>Jack: {id}</li>
+        <li>Port: {id}</li>
       </ul>
     </div>
   ))
+
+  // return data.patchPanel.panelJacks.nodes.map(({ id }) => (
+  //   <div>
+  //     <ul>
+  //       <li>Jack: {id}</li>
+  //     </ul>
+  //   </div>
+  // ))
 }
 
 function App() {
@@ -84,7 +92,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route component={Error} />
           </Switch>
-          <PortJackPair />
+          <Jacks />
         </div>
       </BrowserRouter>
     </ApolloProvider>
