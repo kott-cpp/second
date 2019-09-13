@@ -22,11 +22,15 @@ client.query({
         panelJacks {
           nodes {
             id
+            connectedState
+            switchPortId
           }
         }
         switchPorts {
           nodes {
             id
+            connectedState
+            panelJackId
           }
         }
       }
@@ -35,46 +39,83 @@ client.query({
 })
 
 // .then(result => console.log(result.patchPanel.panelJacks.nodes[0].id))
+/*
+const panelJackId = 298
+const switchPortId = 229
 
-function Jacks() {
-  const { loading, error, data } = useQuery(gql`
-    {
-      patchPanel(patchPanelId: 1) {
-        panelJacks {
-          nodes {
-            id
-          }
-        }
-        switchPorts {
-          nodes {
-            id
-          }
-        }
+const ASSIGN_PORT_TO_JACK = gql`
+  mutation($input: PortToJackAssignmentInput!) {
+    portToJackAssignment(input: $input) {
+      errors {
+        ...messageFragment
+      }
+      messages {
+        ...messageFragment
+      }
+      panelJack {
+        id
+        connectedState
+        switchPortId
+      }
+      switchPort {
+        id
+        connectedState
+        panelJackId
       }
     }
+  }
+  fragment messageFragment on Message {
+    title
+    body
+    category
+    autoClose
+    icon
+  }
+`
+*/
+function Jacks() {
+  const { loading, error, data } = useQuery(gql`
+      {
+          patchPanel(patchPanelId: 1) {
+              panelJacks {
+                  nodes {
+                      id
+                      connectedState
+                      switchPortId
+                  }
+              }
+              switchPorts {
+                  nodes {
+                      id
+                      connectedState
+                      panelJackId
+                  }
+              }
+          }
+      }
   `)
-
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
+  /*
+const panelJack = data.patchPanel.panelJacks.nodes.map(id)
+console.log("panelJacks", panelJack)
 
-  // const panelJack = data.patchPanel.panelJacks.nodes.map(id)
-  // console.log("panelJacks", panelJack)
+return data.patchPanel.switchPorts.nodes.map(({ id }) => (
+  <div>
+    <ul>
+      <li>Port: {id}</li>
+    </ul>
+  </div>
+))
+*/
 
-  return data.patchPanel.switchPorts.nodes.map(({ id }) => (
+  return data.patchPanel.panelJacks.nodes.map(({ switchPortId }) => (
     <div>
       <ul>
-        <li>Port: {id}</li>
+        <li>Jack: {switchPortId}</li>
       </ul>
     </div>
   ))
-
-  // return data.patchPanel.panelJacks.nodes.map(({ id }) => (
-  //   <div>
-  //     <ul>
-  //       <li>Jack: {id}</li>
-  //     </ul>
-  //   </div>
-  // ))
 }
 
 function App() {
@@ -93,6 +134,7 @@ function App() {
             <Route component={Error} />
           </Switch>
           <Jacks />
+          {/*<ASSIGN_PORT_TO_JACK />*/}
         </div>
       </BrowserRouter>
     </ApolloProvider>
