@@ -39,9 +39,37 @@ client.query({
 })
 
 // .then(result => console.log(result.patchPanel.panelJacks.nodes[0].id))
-/*
-const panelJackId = 298
-const switchPortId = 229
+const createController = args => {
+  const {
+    Input,
+    displayName = 'UnknownControl',
+    mutation,
+    preMutation = variablesMutation,
+    updateMutation,
+    postMutation = asDoMutation,
+    propTypes = {},
+  } = args
+
+const asDoMutation = (props, doMutation) => ({
+  ...props,
+  doMutation,
+})
+
+
+const variablesMutation = ({ variables }) => variables || {}
+
+  const container = props => {
+
+    const variables = { panelJack:298, switchPort:229 }
+    console.log('variables', variables)
+
+    const doMutation = useMutation(mutation, {
+      update: updateMutation(props),
+      variables,
+    })
+
+    return <Input {...props} doClick={doMutation} />
+  }
 
 const ASSIGN_PORT_TO_JACK = gql`
   mutation($input: PortToJackAssignmentInput!) {
@@ -72,7 +100,7 @@ const ASSIGN_PORT_TO_JACK = gql`
     icon
   }
 `
-*/
+/*
 function Jacks() {
   const { loading, error, data } = useQuery(gql`
       {
@@ -96,7 +124,7 @@ function Jacks() {
   `)
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
-  /*
+
 const panelJack = data.patchPanel.panelJacks.nodes.map(id)
 console.log("panelJacks", panelJack)
 
@@ -107,7 +135,7 @@ return data.patchPanel.switchPorts.nodes.map(({ id }) => (
     </ul>
   </div>
 ))
-*/
+
 
   return data.patchPanel.panelJacks.nodes.map(({ switchPortId }) => (
     <div>
@@ -117,7 +145,7 @@ return data.patchPanel.switchPorts.nodes.map(({ id }) => (
     </div>
   ))
 }
-
+*/
 function App() {
   return (
     <ApolloProvider client={client}>
