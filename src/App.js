@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch, render } from 'react-router-dom'
 import Home from './components/Home'
 import Pilot from './components/Pilot'
+import Films from './components/Films'
 import About from './components/About'
 import Contact from './components/Contact'
 import Error from './components/Error'
@@ -90,6 +91,7 @@ function App() {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/pilot" component={Pilot} />
+            <Route path="/films" component={Films} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route component={Error} />
