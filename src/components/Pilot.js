@@ -79,6 +79,7 @@ function Pilot() {
           <Helmet>
             <title>My Page</title>
           </Helmet>
+          <p>Pilot</p>
           <PilotName />
         </div>
       </BrowserRouter>
