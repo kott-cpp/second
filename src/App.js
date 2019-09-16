@@ -53,30 +53,30 @@ const PORT_TO_JACK_ASSIGNMENT = gql`
       }
     }
   }
-`;
+`
 
 function PortToJackAssignment() {
-  let input;
-    const [portToJackAssignment, { data }] useMutation(PORT_TO_JACK_ASSIGNMENT);
+  let input
+  const [portToJackAssignment, { data }] = useMutation(PORT_TO_JACK_ASSIGNMENT)
 
   return (
     <div>
       <form
         onSubmit={e => {
-          e.preventDefault();
-          portToJackAssignment({ variables: { input: input.id } });
-          input.id = '';
+          e.preventDefault()
+          portToJackAssignment({ variables: { input: input.id } })
+          input.id = ''
         }}
       >
         <input
           ref={node => {
-          input = node;
+            input = node
           }}
         />
         <button type="submit">Port To Jack Assignment</button>
       </form>
     </div>
-  );
+  )
 }
 /*
 const client = new ApolloClient({

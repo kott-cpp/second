@@ -24,7 +24,7 @@ module.exports = {
     ],
     "rules": {
         "semi": 0,
-        "quotes": ["error", "double"],
+        "quotes": ["error", "single"],
         "indent": ["error", 2],
         "comma-dangle": ["error", "always"]
     }
