@@ -8,6 +8,9 @@ const Navigation = () => {
       <Link to="/" className={styles.button}>
         Home
       </Link>
+      <Link to="/pilot" className={styles.button}>
+        Pilot
+      </Link>
       <Link to="/about" className={styles.button}>
         About
       </Link>
