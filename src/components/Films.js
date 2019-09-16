@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch, render } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import ApolloClient from 'apollo-boost'
 import { gql } from 'apollo-boost'
 import { ApolloProvider, useQuery } from '@apollo/react-hooks'
