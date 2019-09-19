@@ -10,23 +10,32 @@ const portQuery = new ApolloClient({
 
 portQuery.query({
   query: gql`
-      {
-          patchPanel(patchPanelId: 1) {
-              panelJacks {
-                  nodes {
-                      id
-                      connectedState
-                      switchPortId
-                  }
+      mutation ($input: PortToJackAssignmentInput!) {
+          portToJackAssignment(input: $input) {
+              errors {
+                  ...messageFragment
               }
-              switchPorts {
-                  nodes {
-                      id
-                      connectedState
-                      panelJackId
-                  }
+              messages {
+                  ...messageFragment
+              }
+              panelJack {
+                  id
+                  connectedState
+                  switchPortId
+              }
+              switchPort {
+                  id
+                  connectedState
+                  panelJackId
               }
           }
+      }
+      fragment messageFragment on Message {
+          title
+          body
+          category
+          autoClose
+          icon
       }
   `,
 })
