@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import ApolloClient from 'apollo-boost'
 import { gql } from 'apollo-boost'
@@ -61,3 +61,4 @@ function Films() {
   )
 }
 export default Films
+*/
