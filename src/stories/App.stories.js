@@ -26,6 +26,6 @@ export default {
   title: 'App',
 }
 
-export const apple = () => (
+export const app = () => (
   <App/>
 )
