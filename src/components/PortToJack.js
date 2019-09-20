@@ -3,11 +3,11 @@ import ApolloClient from 'apollo-boost'
 import { gql } from 'apollo-boost'
 import { ApolloProvider, useQuery } from '@apollo/react-hooks'
 
-/*export const portQuery = new ApolloClient({
+export const portQuery = new ApolloClient({
   // uri: 'https://graphiql.graphcms.com/simple/v1/swapi',
   uri: 'http://localhost:3000/graphql',
 })
-*/
+
 
 export const mutationPortQuery = gql`
     mutation($input: PortToJackAssignmentInput!) {
