@@ -12,6 +12,7 @@ import ApolloClient from 'apollo-boost'
 import { gql } from 'apollo-boost'
 import { ApolloProvider, useQuery, useMutation } from '@apollo/react-hooks'
 import { mutationPortQuery, portQuery } from './components/PortToJack'
+import { client } from '/.components/films'
 
 function App() {
   /* const variables = {variables: { input: { panelJackId: 298, switchPortId: 229, }, }, }
@@ -22,22 +23,24 @@ function App() {
   */
 
   return (
-    <BrowserRouter>
-      <div>
-        <Helmet>
-          <title>My Page</title>
-        </Helmet>
-        <Navigation />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/pilot" component={Pilot} />
-          <Route path="/films" component={Films} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route component={Error} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <div>
+          <Helmet>
+            <title>My Page</title>
+          </Helmet>
+          <Navigation />
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/pilot" component={Pilot} />
+            <Route path="/films" component={Films} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route component={Error} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </ApolloProvider>
   )
 }
 

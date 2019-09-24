@@ -14,10 +14,10 @@ client
     query: gql`
       {
         allFilms {
-            title
-            director
-          }
+          title
+          director
         }
+      }
     `,
   })
   .then(result => console.log(result.data.allFilms.films))
@@ -26,10 +26,10 @@ function FilmName() {
   const { loading, error, data } = useQuery(gql`
     {
       allFilms {
-          title
-          director
-        }
+        title
+        director
       }
+    }
   `)
 
   if (loading) return <p>Loading...</p>
@@ -45,6 +45,7 @@ function FilmName() {
     </div>
   ))
 }
+FilmName.displayName = 'FilmName'
 function Films() {
   return (
     <ApolloProvider client={client}>
