@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@4winds_cpp/atmosphere": "^1.1.1",
     "@apollo/react-common": "3.0.0",
     "@apollo/react-components": "3.0.0",
     "@apollo/react-hooks": "3.0.0",
