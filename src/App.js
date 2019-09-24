@@ -12,8 +12,11 @@ import ApolloClient from 'apollo-boost'
 import { gql } from 'apollo-boost'
 import { ApolloProvider, useQuery, useMutation } from '@apollo/react-hooks'
 import { mutationPortQuery, portQuery } from './components/PortToJack'
-import { client } from '/.components/films'
 
+
+const client = new ApolloClient({
+  uri: 'https://api.graphcms.com/simple/v1/swapi',
+})
 function App() {
   /* const variables = {variables: { input: { panelJackId: 298, switchPortId: 229, }, }, }
   const [assign, { data, error, loading }] = useMutation(mutationPortQuery)
