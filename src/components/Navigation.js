@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from '../button.module.css'
+import './button.css'
 
 const Navigation = () => {
   return (
     <div>
-      <Link to="/" className={styles.button}>
+      <Link to="/" className={'button'}>
         Home
       </Link>
-      <Link to="/pilot" className={styles.button}>
+      <Link to="/pilot" className={'button'}>
         Pilot
       </Link>
-      <Link to="/films" className={styles.button}>
+      <Link to="/films" className={'button'}>
         Films
       </Link>
-      <Link to="/about" className={styles.button}>
+      <Link to="/about" className={'button'}>
         About
       </Link>
-      <Link to="/contact" className={styles.button}>
+      <Link to="/contact" className={'button'}>
         Contact
       </Link>
     </div>

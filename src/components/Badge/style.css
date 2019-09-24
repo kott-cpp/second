@@ -1,0 +1,6 @@
+.badge {
+    --badge-fg: var(--near-black);
+    --badge-bg: var(--light-gray);
+    --badge-border-color: var(--near-black);
+    --badge-box-shadow: var(--silver);
+}

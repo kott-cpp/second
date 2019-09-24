@@ -1,0 +1,43 @@
+.base,
+.default,
+.info,
+.success,
+.warning,
+.danger {
+  --button-border-color: var(--near-black);
+  --button-border-radius: var(--border-radius-3);
+  --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
+  --button-box-shadow-color: var(--silver);
+  --button-padding-horiz: var(--spacing-small);
+  --button-padding-vert: var(--spacing-extra-small);
+  --button-border-width: 0;
+  --button-border-style: solid;
+
+  border: var(--button-border-width) var(--button-border-style)
+    var(--button-border-color);
+}
+
+.default {
+  --button-fg: var(--near-white);
+  --button-bg: var(--brand-default);
+}
+
+.info {
+  --button-fg: var(--near-white);
+  --button-bg: var(--brand-info);
+}
+
+.success {
+  --button-fg: var(--near-black);
+  --button-bg: var(--brand-success);
+}
+
+.warning {
+  --button-fg: var(--near-black);
+  --button-bg: var(--brand-warning);
+}
+
+.danger {
+  --button-fg: var(--near-black);
+  --button-bg: var(--brand-danger);
+}

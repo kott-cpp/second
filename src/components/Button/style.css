@@ -5,7 +5,7 @@
   --button-box-shadow-color: var(--silver);
 
   box-shadow: var(--button-box-shadow);
-  background-color: var(--button-border-color);
+  background-color: var(--button-bg);
   border-color: var(--button-border-color);
   border-radius: var(--button-border-radius);
   border: none;
