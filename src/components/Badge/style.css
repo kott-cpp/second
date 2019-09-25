@@ -2,9 +2,38 @@
     --badge-fg: var(--near-black);
     --badge-bg: var(--light-gray);
     --badge-border-color: var(--near-black);
-    --badge-box-shadow: var(--silver);
 
-    box-shadow: var(--badge-box-shadow);
     background-color: var(--badge-bg);
     border-color: var(--badge-border-color);
+    border-radius: var(--badge-border-radius);
+    border: none;
+    color: var(--badge-fg);
+    display: inline;
+    text-align: center;
+    padding: var(--badge-padding-vert) var(--badge-padding-horiz);
+    font-size: var(--badge-font-size);
+}
+
+.small {
+    --badge-padding-horiz: var(--spacing-extra-small);
+    --badge-padding-vert: var(--spacing-extra-extra-small);
+    --badge-font-size: var(--font-size-2);
+}
+
+.medium {
+    --badge-padding-horiz: var(--spacing-small);
+    --badge-padding-vert: var(--spacing-extra-small);
+    --badge-font-size: var(--font-size-3);
+}
+
+.large {
+    --badge-padding-horiz: var(--spacing-small);
+    --badge-padding-vert: var(--spacing-extra-small);
+    --badge-font-size: var(--font-size-4);
+}
+
+.extraLarge {
+    --badge-padding-horiz: var(--spacing-small);
+    --badge-padding-vert: var(--spacing-extra-small);
+    --badge-font-size: var(--font-size-5);
 }

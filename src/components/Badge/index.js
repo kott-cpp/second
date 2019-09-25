@@ -25,3 +25,5 @@ Badge.defaultProps = {
   Btn: 'badge',
   size: 'medium',
 }
+
+export default Badge

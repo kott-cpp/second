@@ -1,0 +1,41 @@
+.base,
+.default,
+.info,
+.success,
+.warning,
+.danger {
+    --badge-border-color: var(--near-black);
+    --badge-border-radius: 10rem;
+    --badge-padding-horiz: var(--spacing-small);
+    --badge-padding-vert: var(--spacing-extra-small);
+    --badge-border-width: 0;
+    --badge-border-style: solid;
+
+    border: var(--badge-border-width) var(--badge-border-style)
+      var(--badge-border-color);
+}
+
+.default {
+    --button-fg: var(--near-white);
+    --button-bg: var(--brand-default);
+}
+
+.info {
+    --button-fg: var(--near-white);
+    --button-bg: var(--brand-info);
+}
+
+.success {
+    --button-fg: var(--near-black);
+    --button-bg: var(--brand-success);
+}
+
+.warning {
+    --button-fg: var(--near-black);
+    --button-bg: var(--brand-warning);
+}
+
+.danger {
+    --button-fg: var(--near-black);
+    --button-bg: var(--brand-danger);
+}
