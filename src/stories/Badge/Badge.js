@@ -1,10 +1,10 @@
 import cx from 'classnames'
-import PropTypes from 'pro-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import './styles.css'
 import Badge from '../../../src/components/Badge'
 
-const badgeThemes = ['default', 'info',]
+const badgeThemes = ['default', 'info', 'success', 'warning', 'danger',]
 const badgeSizes = ['small', 'medium', 'large', 'extraLarge',]
 
 const BadgeStory = ({ className }) => (
@@ -15,7 +15,7 @@ const BadgeStory = ({ className }) => (
           {badgeThemes.map(theme => (
             <li
               key={`badgeStory-badge-sizes-${size}-${theme}`}
-              className={`badgeRow`}
+              className={'badgeRow'}
             >
               <Badge label={theme} theme={theme} size={size} />
             </li>

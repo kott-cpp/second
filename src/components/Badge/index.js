@@ -19,7 +19,6 @@ Badge.propTypes = {
   theme: PropTypes.string,
   size: PropTypes.string,
 }
-
 Badge.defaultProps = {
   theme: 'default',
   Btn: 'badge',

@@ -4,4 +4,4 @@ import { storiesOf } from '@storybook/react'
 
 const story = storiesOf('Badge')
 
-story.add('Default', () => <BadgeStory />)
+story.add('Default', () => <BadgeStory  />)
