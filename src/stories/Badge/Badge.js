@@ -4,8 +4,8 @@ import React from 'react'
 import './styles.css'
 import Badge from '../../../src/components/Badge'
 
-const badgeThemes = ['default', 'info', 'success', 'warning', 'danger',]
-const badgeSizes = ['small', 'medium', 'large', 'extraLarge',]
+const badgeThemes = ['default', 'info', 'success', 'warning', 'danger']
+const badgeSizes = ['small', 'medium', 'large', 'extraLarge']
 
 const BadgeStory = ({ className }) => (
   <div className={cx(className, 'badge')}>
@@ -17,7 +17,7 @@ const BadgeStory = ({ className }) => (
               key={`badgeStory-badges-size-${size}-${theme}`}
               className={'badgeRow'}
             >
-              <Badge label={theme} theme={theme} size={size} />
+              <Badge label={theme} icon={'check'} theme={theme} size={size} />
             </li>
           ))}
         </React.Fragment>
