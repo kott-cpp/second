@@ -9,6 +9,7 @@
     "@apollo/react-hooks": "3.0.0",
     "@apollo/react-testing": "3.0.0",
     "@fortawesome/fontawesome-pro": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",

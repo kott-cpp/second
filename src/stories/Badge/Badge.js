@@ -14,7 +14,7 @@ const BadgeStory = ({ className }) => (
         <React.Fragment key={`badgeStory-badge-size-${size}`}>
           {badgeThemes.map(theme => (
             <li
-              key={`badgeStory-badge-sizes-${size}-${theme}`}
+              key={`badgeStory-badges-size-${size}-${theme}`}
               className={'badgeRow'}
             >
               <Badge label={theme} theme={theme} size={size} />

@@ -16,26 +16,26 @@
 }
 
 .default {
-    --button-fg: var(--near-white);
-    --button-bg: var(--brand-default);
+    --badge-fg: var(--near-white);
+    --badge-bg: var(--brand-default);
 }
 
 .info {
-    --button-fg: var(--near-white);
-    --button-bg: var(--brand-info);
+    --badge-fg: var(--near-white);
+    --badge-bg: var(--brand-info);
 }
 
 .success {
-    --button-fg: var(--near-black);
-    --button-bg: var(--brand-success);
+    --badge-fg: var(--near-black);
+    --badge-bg: var(--brand-success);
 }
 
 .warning {
-    --button-fg: var(--near-black);
-    --button-bg: var(--brand-warning);
+    --badge-fg: var(--near-black);
+    --badge-bg: var(--brand-warning);
 }
 
 .danger {
-    --button-fg: var(--near-black);
-    --button-bg: var(--brand-danger);
+    --badge-fg: var(--near-black);
+    --badge-bg: var(--brand-danger);
 }

@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import './style.css'
 import './themes.css'
-import { wrapperShape } from '../../utils/prop-types'
 
-const Badge = ({ className, label, children, theme, Btn, size, }) => (
-  <Btn className={cx(className, 'badge', size, theme)}>
+const Badge = ({ className, label, children, theme, size, }) => (
+  <span className={cx(className, 'badge', size, theme)}>
     {children || label}
-  </Btn>
+  </span>
 )
 
 Badge.propTypes = {
-  Btn: wrapperShape,
   className: PropTypes.string,
   label: PropTypes.string,
   children: PropTypes.number,
@@ -21,7 +19,6 @@ Badge.propTypes = {
 }
 Badge.defaultProps = {
   theme: 'default',
-  Btn: 'badge',
   size: 'medium',
 }
 
