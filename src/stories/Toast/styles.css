@@ -1,3 +1,37 @@
-.toasty {
+.toast {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.toast > ul {
+  flex: 0 1 auto;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: var(--spacing-medium);
+  justify-content: space-evenly;
+}
+.toast > ul > li {
+  margin-left: var(--spacing-small);
+  margin-right: var(--spacing-small);
+}
+
+.toastRow {
+  display: flex;
+  align-content: center;
+}
+
+.Toastify__toast--success {
+  background: var(--brand-success); }
+.Toastify__toast--warn {
+  background: var(--brand-warning); }
+.Toastify__toast--info {
+  background: var(--brand-info); }
+
+.danger > div {
+  background: var(--brand-danger);
+  color: var(--near-white);
 }
