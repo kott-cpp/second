@@ -30,8 +30,14 @@
   background: var(--brand-warning); }
 .Toastify__toast--info {
   background: var(--brand-info); }
+.Toastify__toast--error {
+  background: var(--brand-danger); }
 
+/*
 .danger > div {
   background: var(--brand-danger);
   color: var(--near-white);
 }
+ */
+
+

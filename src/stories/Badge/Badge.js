@@ -13,11 +13,12 @@ const BadgeStory = ({ className }) => (
       {badgeSizes.map((size, idx) => (
         <React.Fragment key={`badgeStory-badge-size-${size}`}>
           {badgeThemes.map(theme => (
+            // TODO add badge icon here
             <li
               key={`badgeStory-badges-size-${size}-${theme}`}
               className={'badgeRow'}
             >
-              <Badge label={theme} icon={'check'} theme={theme} size={size} />
+              <Badge label={theme} theme={theme} size={size} />
             </li>
           ))}
         </React.Fragment>

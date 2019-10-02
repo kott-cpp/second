@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.spin {
+  animation: spin 2s infinite linear;
+}
+
 .button > ul {
   flex: 0 1 auto;
   display: grid;

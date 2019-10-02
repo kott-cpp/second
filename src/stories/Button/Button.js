@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import './styles.css'
 import Button from '../../../src/components/Button'
+import BadgeStory from '../Badge/Badge'
 
 const buttonThemes = ['default', 'info', 'success', 'warning', 'danger',]
 const buttonSizes = ['small', 'medium', 'large', 'extraLarge',]
+const buttonIcons = ['circle-notch', 'cog', 'sync', 'spinner', 'hurricane', ]
 
 const ButtonStory = ({ className }) => (
   <div className={cx(className, 'button')}>
@@ -17,7 +19,7 @@ const ButtonStory = ({ className }) => (
               key={`buttonStory-button-sizes-${size}-${theme}`}
               className={'buttonRow'}
             >
-              <Button label={theme} theme={theme} size={size} />
+              <Button label={theme} icon={'times'} theme={theme} size={size} />
             </li>
           ))}
         </React.Fragment>

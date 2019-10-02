@@ -9,13 +9,13 @@ import './styles.css'
 
 const ToastStory = ({ className }) => {
   const notifyTl = () =>
-    toast.success('Top-Left   Success', { containerId: 'tl' })
+    toast.success('Top-Left Success', { containerId: 'tl' })
   const notifyTc = () =>
-    toast.error('Top-Center   Error', { containerId: 'tc' })
+    toast.error('Top-Center Danger', { containerId: 'tc' })
   const notifyBr = () =>
-    toast.warn('Bottom-Right   Warning', { containerId: 'br' })
+    toast.warn('Bottom-Right Warning', { containerId: 'br' })
   const notifyTr = () =>
-    toast.info('Top-Right   Info', { containerId: 'tr' })
+    toast.info('Top-Right Info', { containerId: 'tr' })
   const notifyBc = () =>
     toast('This is on the Bottom-Center', { containerId: 'bc' })
   const notifyBl = () =>
@@ -28,7 +28,6 @@ const ToastStory = ({ className }) => {
           enableMultiContainer
           containerId={'tl'}
           position={toast.POSITION.TOP_LEFT}
-          className={'danger'}
         />
         <ToastContainer
           enableMultiContainer

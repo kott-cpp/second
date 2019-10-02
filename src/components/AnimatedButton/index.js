@@ -5,22 +5,22 @@ import './style.css'
 import './themes.css'
 import { wrapperShape } from '../../utils/prop-types'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import { faCheck, faTimes } from '@fortawesome/pro-solid-svg-icons'
+import { faCircleNotch, faCog, faSync, faSpinner, faHurricane  } from '@fortawesome/pro-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 const setupIcons = () => {
-  library.add(faCheck, faTimes)
+  library.add(faCircleNotch, faCog, faSync, faSpinner, faHurricane )
 }
 setupIcons()
 
-const Button = ({ className, label, children, theme, Btn, size, icon }) => (
+const AnimatedButton = ({ className, label, children, theme, Btn, size, icon }) => (
   <Btn className={cx(className, 'button', size, theme)}>
     {children || label}
     {icon && <Icon icon={icon} />}
   </Btn>
 )
 
-Button.propTypes = {
+AnimatedButton.propTypes = {
   Btn: wrapperShape,
   className: PropTypes.string,
   label: PropTypes.string,
@@ -28,10 +28,10 @@ Button.propTypes = {
   theme: PropTypes.string,
   size: PropTypes.string,
 }
-Button.defaultProps = {
+AnimatedButton.defaultProps = {
   theme: 'default',
   Btn: 'button',
   size: 'medium',
 }
 
-export default Button
+export default AnimatedButton

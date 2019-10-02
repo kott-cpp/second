@@ -26,6 +26,6 @@ module.exports = {
         "semi": 0,
         "quotes": ["error", "single"],
         "indent": ["error", 2],
-        "comma-dangle": ["error", "always"]
+        "comma-dangle": ["warn", "always"]
     }
 };
