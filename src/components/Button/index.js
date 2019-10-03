@@ -15,7 +15,7 @@ setupIcons()
 
 const Button = ({ className, label, children, theme, Btn, size, icon }) => (
   <Btn className={cx(className, 'button', size, theme)}>
-    {children || label}
+    <span className={'pr1'}> {children || label} </span>
     {icon && <Icon icon={icon} />}
   </Btn>
 )
@@ -27,11 +27,13 @@ Button.propTypes = {
   children: PropTypes.number,
   theme: PropTypes.string,
   size: PropTypes.string,
+  icon: PropTypes.string,
 }
 Button.defaultProps = {
   theme: 'default',
   Btn: 'button',
   size: 'medium',
+  icon: 'check',
 }
 
 export default Button

@@ -32,27 +32,27 @@ const AnimatedButtonStory = ({ className }) => {
   return (
     <div className={cx(className, 'animatedButton')}>
       <button className={cx('info', 'button')}>
-        <span className={'pr1'}>Spinning</span>
+        <span className={'pr1'}>Loading...</span>
         <Icon icon={'circle-notch'} spin />
       </button>
       <button className={cx('success', 'button')}>
-        Spinning
+        <span className={'pr1'}>Loading...</span>
         <Icon icon={'hurricane'} spin />
       </button>
       <button className={cx('danger', 'button')}>
-        Spinning
+        <span className={'pr1'}>Loading...</span>
         <Icon icon={'sync'} className={cx('spinner')} />
       </button>
       <button className={cx('warning', 'button')}>
-        Spinning
+        <span className={'pr1'}>Loading...</span>
         <Icon icon={'spinner'} className={cx('spinner')} />
       </button>
       <button className={cx('info', 'button')}>
-        Spinning
+        <span className={'pr1'}>Loading...</span>
         <Icon icon={'cog'} className={cx('spinner')} />
       </button>
       <button className={cx('info', 'button')}>
-        Spinning
+        <span className={'pr1'}>Loading...</span>
         <Icon icon={'spinner-third'} className={cx('spinner')} />
       </button>
     </div>
