@@ -33,11 +33,11 @@ const AnimatedButtonStory = ({ className }) => {
     <div className={cx(className, 'animatedButton')}>
       <button className={cx('info', 'button')}>
         <span className={'pr1'}>Loading...</span>
-        <Icon icon={'circle-notch'} spin />
+        <Icon icon={'circle-notch'} className={cx('spinner')} />
       </button>
       <button className={cx('success', 'button')}>
         <span className={'pr1'}>Loading...</span>
-        <Icon icon={'hurricane'} spin />
+        <Icon icon={'hurricane'} className={'spinner-reverse'}  />
       </button>
       <button className={cx('danger', 'button')}>
         <span className={'pr1'}>Loading...</span>
