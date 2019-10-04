@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import './styles.css'
 import Button from '../../../src/components/Button'
-import BadgeStory from '../Badge/Badge'
 
 const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
 const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
