@@ -4,7 +4,7 @@ import { Bar, Line, Pie } from 'react-chartjs-2'
 
 class Chart extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       chartData: {
         labels: [
@@ -38,7 +38,9 @@ class Chart extends Component {
       <div className={'chart'}>
         <Bar
           data={this.state.chartData}
-          options={{ maintainAspectRatio: false }}
+          options={{
+            //Using Chart.js With React 8:52 / 23:41
+          }}
         />
       </div>
     )
