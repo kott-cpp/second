@@ -1,8 +1,17 @@
 import React from 'react'
-import TwittleStory from './Twittle'
-import { storiesOf } from '@storybook/react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
 import './styles.css'
+import Twittle from '../../../src/components/Twittle'
 
-const story = storiesOf('Twittle')
+const TwittleStory = ({ className }) => (
+  <div>
+    <Twittle />
+  </div>
+)
 
-story.add('Default', () => <TwittleStory />)
+TwittleStory.propTypes = {
+  classname: PropTypes.string,
+}
+
+export default TwittleStory

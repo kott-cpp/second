@@ -1,8 +1,9 @@
-/*import React from 'react'
+import React from 'react'
 import cs from 'classnames'
-import './styles.css'
+import TwittleStory from './Twittle'
+import {storiesOf} from '@storybook/react'
 
-const TwittleStory = ({ classname}) => (
-  <section className={cx(className)}>
-)
-*/
+
+const twittleStory = storiesOf('Twittle')
+
+twittleStory.add('Default', () => <TwittleStory />)
