@@ -38,6 +38,8 @@ class Chart extends Component {
       <div className={'chart'}>
         <Bar
           data={this.state.chartData}
+          width={500}
+          height={225}
           options={{
             //Using Chart.js With React 8:52 / 23:41
           }}
