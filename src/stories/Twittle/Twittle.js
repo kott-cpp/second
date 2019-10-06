@@ -5,8 +5,8 @@ import './styles.css'
 import Twittle from '../../../src/components/Twittle'
 
 const TwittleStory = ({ className }) => (
-  <div>
-    <Twittle />
+  <div className={cx(className)}>
+    <Twittle icon={'AngleDown'}/>
   </div>
 )
 
