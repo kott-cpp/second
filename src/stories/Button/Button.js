@@ -6,7 +6,7 @@ import Button from '../../../src/components/Button'
 
 const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
 const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
-const buttonIcons = ['circle-notch', 'cog', 'sync', 'spinner', 'hurricane']
+const buttonIcons = ['circle-notch', 'cog', 'sync', 'angle-down', 'hurricane']
 
 const ButtonStory = ({ className }) => (
   <div className={cx(className, 'button')}>

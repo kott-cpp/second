@@ -6,7 +6,7 @@ import Twittle from '../../../src/components/Twittle'
 
 const TwittleStory = ({ className }) => (
   <div className={cx(className)}>
-    <Twittle icon={'AngleDown'}/>
+    <Twittle icon={'angle-down'}/>
   </div>
 )
 

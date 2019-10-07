@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch, render } from 'react-router-dom'
 import Home from './components/Home'
 import Pilot from './components/Pilot'
 import Films from './components/Films'
+import Chart from './components/Chart'
+import Twittle from './components/Twittle'
 import About from './components/About'
 import Contact from './components/Contact'
 import Error from './components/Error'
@@ -37,6 +39,8 @@ function App() {
             <Route path="/" component={Home} exact />
             <Route path="/pilot" component={Pilot} />
             <Route path="/films" component={Films} />
+            <Route path="/chart" component={Chart} />
+            <Route path="/twittle" component={Twittle} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route component={Error} />

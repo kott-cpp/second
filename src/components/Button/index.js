@@ -5,11 +5,11 @@ import './style.css'
 import './themes.css'
 import { wrapperShape } from '../../utils/prop-types'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import { faCheck, faTimes } from '@fortawesome/pro-solid-svg-icons'
+import { faCheck, faTimes, faAngleDown } from '@fortawesome/pro-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 const setupIcons = () => {
-  library.add(faCheck, faTimes)
+  library.add(faCheck, faTimes, faAngleDown)
 }
 setupIcons()
 

@@ -15,13 +15,20 @@ const Twittle = ({ className, icon }) => {
   const [toggled, toggle] = useState(false)
   return (
     <React.Fragment>
-      <article>
-        <header>
-          <div className={cx(className, 'headerLeft')}>Title of page</div>
-          <span className={cx(className, 'headerRight')} onClick={() => (toggled => !toggled)}>wow</span>
-        </header>
-        <section>{toggled && <React.Fragment>hello</React.Fragment>}</section>
-      </article>
+      <div className={'boundary'}>
+        <article>
+          <header>
+            <div className={cx(className, 'headerLeft')}>Title of page</div>
+            <span
+              className={cx(className, 'headerRight', 'angle-down')}
+              onClick={() => toggled => !toggled}
+            >
+
+            </span>
+          </header>
+          <section>{toggled && <React.Fragment>hello</React.Fragment>}</section>
+        </article>
+      </div>
     </React.Fragment>
   )
 }
