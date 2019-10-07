@@ -17,23 +17,23 @@
 .small {
     --badge-padding-horiz: var(--spacing-extra-small);
     --badge-padding-vert: var(--spacing-extra-extra-small);
-    --badge-font-size: var(--font-size-2);
+    --badge-font-size: var(--font-size-1);
 }
 
 .medium {
     --badge-padding-horiz: var(--spacing-small);
     --badge-padding-vert: var(--spacing-extra-small);
-    --badge-font-size: var(--font-size-3);
+    --badge-font-size: var(--font-size-2);
 }
 
 .large {
     --badge-padding-horiz: var(--spacing-small);
     --badge-padding-vert: var(--spacing-extra-small);
-    --badge-font-size: var(--font-size-4);
+    --badge-font-size: var(--font-size-3);
 }
 
 .extraLarge {
     --badge-padding-horiz: var(--spacing-small);
     --badge-padding-vert: var(--spacing-extra-small);
-    --badge-font-size: var(--font-size-5);
+    --badge-font-size: var(--font-size-4);
 }

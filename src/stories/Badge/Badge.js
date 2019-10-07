@@ -18,7 +18,7 @@ const BadgeStory = ({ className }) => (
               key={`badgeStory-badges-size-${size}-${theme}`}
               className={'badgeRow'}
             >
-              <Badge label={theme} theme={theme} size={size} />
+              <Badge label={'50+'} theme={theme} size={size} />
             </li>
           ))}
         </React.Fragment>

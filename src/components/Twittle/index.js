@@ -19,7 +19,7 @@ const Twittle = ({ className, icon }) => {
         <header>
           <div className={cx(className, 'headerLeft')}>Title of page</div>
           <span
-            className={cx(className, 'headerRight fa-rotate-180')}
+            className={cx(className, 'headerRight')}
             onClick={() => toggle(toggled => !toggled)}
           > {icon && <Icon icon={icon} />} </span>
         </header>
