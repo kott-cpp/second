@@ -8,3 +8,4 @@ const fizzBuzz = require('./failedFizzBuzz');
 //https://jestjs.io/docs/en/expect
 
 it('fizzBuzz is a function', () => expect(fizzBuzz).toBeFunction)
+it('inputIndex = 0', () => expect(inputIndex).toBeNumber())

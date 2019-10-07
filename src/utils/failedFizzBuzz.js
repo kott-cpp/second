@@ -18,4 +18,4 @@ function failedFizzBuzz(num) {
 }
 
 failedFizzBuzz(57)
-module.exports = failedFizzBuzz
+module.exports = failedFizzBuzz, inputIndex
