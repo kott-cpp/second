@@ -11,14 +11,14 @@ const Navigation = () => {
       <Link to="/pilot" className={'button'}>
         Pilot
       </Link>
+      <Link to="/pilotTable" className={'button'}>
+        PilotTable
+      </Link>
       <Link to="/films" className={'button'}>
         Films
       </Link>
       <Link to="/Chart" className={'button'}>
         Chart
-      </Link>
-      <Link to="/Twittle" className={'button'}>
-        Twittle
       </Link>
       <Link to="/about" className={'button'}>
         About

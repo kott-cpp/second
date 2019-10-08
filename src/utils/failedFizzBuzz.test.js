@@ -1,4 +1,4 @@
-const fizzBuzz = require('./failedFizzBuzz');
+const {failedFizzBuzz, inputIndex} = require('./failedFizzBuzz');
 
 
 // https://github.com/jest-community/jest-extended
@@ -7,5 +7,5 @@ const fizzBuzz = require('./failedFizzBuzz');
 
 //https://jestjs.io/docs/en/expect
 
-it('fizzBuzz is a function', () => expect(fizzBuzz).toBeFunction)
+it('fizzBuzz is a function', () => expect(failedFizzBuzz).toBeFunction())
 it('inputIndex = 0', () => expect(inputIndex).toBeNumber())
