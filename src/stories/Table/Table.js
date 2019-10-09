@@ -9,7 +9,7 @@ const TableStory = () => (
       <tr>
         <th>Name</th>
         <th>Height</th>
-        <th>Planet</th>
+        <th>Homeworld</th>
       </tr>
     </thead>
     <Table />

@@ -7,24 +7,22 @@ class Chart extends Component {
     this.state = {
       chartData: {
         labels: [
-          'Boston',
-          'Worcester',
-          'Springfield',
-          'Lowell',
-          'Cambridge',
-          'New Bedford',
+          'Chewbacca',
+          'Han Solo',
+          'Lando Calrissian',
+          'Nien Nunb',
+          'Rey',
         ],
         datasets: [
           {
-            label: 'Population',
-            data: [617594, 181045, 153060, 106519, 105162, 95072],
+            label: 'Height in cm',
+            data: [228, 180, 177, 160, 150],
             backgroundColor: [
               'rgba(255, 99, 132, 0.6)',
               'rgba(54, 162, 235, 0.6)',
               'rgba(255, 206, 86, 0.6)',
               'rgba(75, 192, 192, 0.6)',
               'rgba(153, 102, 255, 0.6)',
-              'rgba(255, 159, 64, 0.6)',
             ],
           },
         ],
@@ -35,10 +33,10 @@ class Chart extends Component {
   render() {
     return (
       <div className={'chart'}>
-        <Bar
+        <Line
           data={this.state.chartData}
-          width={500}
-          height={225}
+          width={300}
+          height={150}
           options={
             {
               //Using Chart.js With React 8:52 / 23:41

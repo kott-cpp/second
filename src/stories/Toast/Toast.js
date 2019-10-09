@@ -56,12 +56,12 @@ const ToastStory = ({ className }) => {
           position={toast.POSITION.BOTTOM_LEFT}
         />
 
-        <button onClick={notifyTl}>Top Left</button>
-        <button onClick={notifyTc}>Top Center</button>
-        <button onClick={notifyTr}>Top Right</button>
-        <button onClick={notifyBr}>Bottom Right</button>
-        <button onClick={notifyBc}>Bottom Center</button>
-        <button onClick={notifyBl}>Bottom Left</button>
+        <button onClick={notifyTl} className={cx('button medium success toastSpacing')}>Top Left</button>
+        <button onClick={notifyTc} className={cx('button medium danger toastSpacing')}>Top Center</button>
+        <button onClick={notifyTr} className={cx('button medium info toastSpacing')}>Top Right</button>
+        <button onClick={notifyBr} className={cx('button medium warning toastSpacing')}>Bottom Right</button>
+        <button onClick={notifyBc} className={cx('button medium success toastSpacing')}>Bottom Center</button>
+        <button onClick={notifyBl} className={cx('button medium warning toastSpacing')}>Bottom Left</button>
       </div>
     </div>
   )
