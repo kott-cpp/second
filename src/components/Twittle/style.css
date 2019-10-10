@@ -33,9 +33,15 @@ section {
   border-bottom: 1px var(--blue) solid;
   height: 100px;
 }
-span.toggle {
-  rotation: 90deg;
+.toggled {
+  transform: rotate(90deg);
+  transition: transform .3s ease;
 }
+
+.toggle {
+  transition: transform .3s ease;
+}
+
 .transition {
 
 }

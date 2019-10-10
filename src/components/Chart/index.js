@@ -33,7 +33,7 @@ class Chart extends Component {
   render() {
     return (
       <div className={'chart'}>
-        <Line
+        <Bar
           data={this.state.chartData}
           width={300}
           height={150}

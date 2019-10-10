@@ -33,7 +33,7 @@ client
       }
     `,
   })
-  .then(result => console.log(result.data.Starship.pilots[0]))
+  .then(result => console.log(result.data.Starship.pilots[0].films[0].title))
 
 function PilotName() {
   const { loading, error, data } = useQuery(gql`
@@ -61,11 +61,12 @@ function PilotName() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
-  return data.Starship.pilots.map(({ name, height, homeworld }) => (
-    <div>
+  return data.Starship.pilots.map(({ name, height, homeworld, films }, idx) => (
+    <div key={idx}>
       <ul>
         <li>
-          Name: {name} - Height: {height}cm -{homeworld.name}
+          Name: {name}- Height: {height}cm -{homeworld.name}
+          -{films.map(({ title }) => title).join(', ')}
         </li>
       </ul>
     </div>

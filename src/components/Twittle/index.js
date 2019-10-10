@@ -13,13 +13,15 @@ setupIcons()
 
 const Twittle = ({ className, icon }) => {
   const [toggled, toggle] = useState(false);
+  const twittle = toggled ? 'toggled' : 'toggle';
+
   return (
     <React.Fragment>
       <article>
         <header>
           <div className={cx(className, 'headerLeft')}>Title of page</div>
           <span
-            className={cx(className, 'headerRight')}
+            className={cx(className, 'headerRight', twittle)}
             onClick={() => toggle(toggled => !toggled)}
           > {icon && <Icon icon={icon} />} </span>
         </header>

@@ -1,12 +1,14 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest/globals": true
     },
     "extends": [
       "eslint:recommended",
       "prettier",
-      "prettier/react"
+      "prettier/react",
+      "plugin:jest/recommended"
       ],
     "globals": {
         "Atomics": "readonly",
@@ -20,6 +22,7 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
+      "jest",
       "prettier"
     ],
     "rules": {
@@ -27,5 +30,6 @@ module.exports = {
         "quotes": ["error", "single"],
         "indent": ["error", 2],
         "comma-dangle": ["warn", "always"]
+
     }
 };
