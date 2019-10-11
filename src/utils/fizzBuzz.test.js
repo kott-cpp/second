@@ -27,4 +27,9 @@ describe('input', () => {
     expect(result).toEqual('fizzBuzz')
   })
 
+  it('should return an array with 12', function() {
+    const result = fizzBuzz(12)
+    expect(result).toEqual('12')
+  })
+
 })

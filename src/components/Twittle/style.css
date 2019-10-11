@@ -34,7 +34,7 @@ section {
   height: 100px;
 }
 .toggled {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   transition: transform .3s ease;
 }
 

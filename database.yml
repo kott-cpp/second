@@ -1,0 +1,23 @@
+---
+meats: &meat
+  name: string
+  cut: string
+  safe_temp: string
+
+meals: &meals
+  name: string
+  meat_id: id
+  method_id: id
+  sides: text
+
+methods:
+  name: string
+  duration: integer
+  temperature: integer
+
+recipes:
+  name: string
+  meat_id: string
+  method_id: string
+  directions: text
+  ingredients: text
