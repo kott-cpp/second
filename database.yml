@@ -2,7 +2,7 @@
 meats: &meat
   name: string
   cut: string
-  safe_temp: string
+  safe_temp: integer
 
 meals: &meals
   name: string
@@ -10,12 +10,12 @@ meals: &meals
   method_id: id
   sides: text
 
-methods:
+methods: &methods
   name: string
   duration: integer
   temperature: integer
 
-recipes:
+recipes: &recipes
   name: string
   meat_id: string
   method_id: string
