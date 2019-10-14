@@ -1,4 +1,4 @@
-const fizzBuzz = require('./fizzBuzz');
+const {fizzBuzz, allFizzBuzz}  = require('./fizzBuzz');
 
 
 // https://github.com/jest-community/jest-extended
@@ -26,10 +26,40 @@ describe('input', () => {
     const result = fizzBuzz(75)
     expect(result).toEqual('fizzBuzz')
   })
-
-  it('should return an array with 12', function() {
-    const result = fizzBuzz(12)
-    expect(result).toEqual('12')
-  })
-
 })
+
+describe('allFizzBuzz using fizzBuzz', () => {
+  it('should be a function', () => expect(allFizzBuzz).toBeFunction())
+
+  it('should be an array', () => {
+    const result = allFizzBuzz()
+    expect(result).toBeArray()
+  });
+
+  it('should have 12 in the array', () => {
+    const result = allFizzBuzz(12, 13)
+    expect(result).toEqual(expect.arrayContaining(['12:', '13:']))
+  });
+
+  it('should have 3 objects in the array', () => {
+    const result = allFizzBuzz(12,14)
+    expect(result).toHaveLength(3)
+  });
+
+  it('should have 12, 13, 14 in the array', () => {
+    const result = allFizzBuzz(12, 14)
+    expect(result).toEqual(expect.arrayContaining(['12:', '13:', '14:']))
+  });
+
+  it('should have 12, 13, 14 in the array', () => {
+    const result = allFizzBuzz(14, 12)
+    expect(result).toEqual(expect.arrayContaining(['12:', '13:', '14:']))
+  });
+
+
+  it('should have 12:, 15:fizz, 17:buzz, 57:fizzBuzz in the array', () => {
+    const result = allFizzBuzz(1, 100)
+    console.log(result)
+    expect(result).toEqual(expect.arrayContaining(['12:', '15:fizz', '17:buzz', '57:fizzBuzz']))
+  });
+});
