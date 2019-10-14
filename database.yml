@@ -1,21 +1,22 @@
 ---
-meats: &meat
+meats:
   name: string
   cut: string
   safe_temp: integer
 
-meals: &meals
+meals:
   name: string
-  meat_id: id
-  method_id: id
   sides: text
+  recipe_id: id
+  made_on: date
 
-methods: &methods
+cooking_methods:
   name: string
   duration: integer
   temperature: integer
+  description: text
 
-recipes: &recipes
+meal_recipes:
   name: string
   meat_id: string
   method_id: string
