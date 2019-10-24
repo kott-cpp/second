@@ -7,6 +7,7 @@ import Films from './components/Films'
 import Chart from './components/Chart'
 import About from './components/About'
 import Contact from './components/Contact'
+import TodoApp from './components/TodoApp'
 import Error from './components/Error'
 import Navigation from './components/Navigation'
 import Helmet from 'react-helmet'
@@ -43,6 +44,7 @@ function App() {
             <Route path="/chart" component={Chart} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/todoApp" component={TodoApp} />
             <Route component={Error} />
           </Switch>
         </div>

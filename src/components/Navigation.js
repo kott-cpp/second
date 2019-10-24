@@ -26,6 +26,9 @@ const Navigation = () => {
       <Link to="/contact" className={'button'}>
         Contact
       </Link>
+      <Link to="/todoApp" className={'button'}>
+        TodoApp
+      </Link>
     </div>
   )
 }
