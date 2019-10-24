@@ -11,6 +11,9 @@ const Navigation = () => {
       <Link to="/pilot" className={'button'}>
         Pilot
       </Link>
+      <Link to="/newTable" className={'button'}>
+        NewTable
+      </Link>
       <Link to="/pilotTable" className={'button'}>
         PilotTable
       </Link>
