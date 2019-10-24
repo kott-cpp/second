@@ -61,11 +61,13 @@ function TodoApp() {
     localStorage.setItem('data', JSON.stringify(state))
   }, [state])
   return (
-    <Context.Provider value={dispatch} className={'todo'}>
-      <h1>Todos App</h1>
-      <button onClick={() => dispatch({ type: 'add' })}>New Todo</button>
-      <br />
-      <TodosList items={state} />
+    <Context.Provider value={dispatch}>
+      <div className={'todo'}>
+        <h1>Todos App</h1>
+        <button onClick={() => dispatch({ type: 'add' })}>New Todo</button>
+        <br />
+        <TodosList items={state} />
+      </div>
     </Context.Provider>
   )
 }

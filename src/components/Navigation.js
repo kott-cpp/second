@@ -32,6 +32,9 @@ const Navigation = () => {
       <Link to="/todoApp" className={'button'}>
         TodoApp
       </Link>
+      <Link to="/themeButton" className={'button'}>
+        ThemeButton
+      </Link>
     </div>
   )
 }

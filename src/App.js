@@ -9,6 +9,7 @@ import Chart from './components/Chart'
 import About from './components/About'
 import Contact from './components/Contact'
 import TodoApp from './components/TodoApp'
+import ThemeButton from './components/ThemeButton'
 import Error from './components/Error'
 import Navigation from './components/Navigation'
 import Helmet from 'react-helmet'
@@ -47,6 +48,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/todoApp" component={TodoApp} />
+            <Route path="/themeButton" component={ThemeButton} />
             <Route component={Error} />
           </Switch>
         </div>
