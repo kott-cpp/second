@@ -15,18 +15,39 @@ class StackedChart extends Component {
             label: 'AQ',
             data: [985150, 892546, 1403729, 296850],
             backgroundColor: '#C0504D',
+            borderWidth: {
+              top: 2,
+              right: 0,
+              bottom: 0,
+              left: 0,
+            },
+            borderColor: 'white',
           },
           {
             stack: key1,
             label: 'STR',
             data: [1482364, 1163528, 1688944, 248340],
             backgroundColor: '#71588F',
+            borderWidth: {
+              top: 2,
+              right: 0,
+              bottom: 0,
+              left: 0,
+            },
+            borderColor: 'white',
           },
           {
             stack: key1,
             label: 'SOL',
             data: [728244, 499475, 1073875, 168886],
             backgroundColor: '#FFFF00',
+            borderWidth: {
+              top: 2,
+              right: 0,
+              bottom: 0,
+              left: 0,
+            },
+            borderColor: 'white',
           },
           {
             stack: key1,
@@ -74,24 +95,24 @@ class StackedChart extends Component {
 
             // Adds a dollar sign and commas to scales
             scales: {
-              title: {
-                display: 'true',
-                text: 'USD',
-                fontSize: 20,
-                position: 'left',
-              },
               yAxes: [
                 {
+                  scaleLabel: {
+                    display: 'true',
+                    labelString: 'USD',
+                    fontSize: 20,
+                  },
                   ticks: {
                     beginAtZero: true,
+                    stepSize: 1000000,
                     callback: function(value, index, values) {
                       if (parseInt(value) >= 1000) {
                         return (
                           '$' +
-                          value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                          value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.00'
                         )
                       } else {
-                        return '$' + value
+                        return '$' + value + '.00'
                       }
                     },
                   },

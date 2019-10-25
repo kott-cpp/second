@@ -2,6 +2,6 @@ import React from 'react'
 import StackedChartStory from './StackedChart'
 import {storiesOf} from '@storybook/react'
 
-const chartStory = storiesOf('StackedChart')
+const stackedChartStory = storiesOf('StackedChart')
 
-chartStory.add('Default', () => <StackedChartStory />)
+stackedChartStory.add('Default', () => <StackedChartStory />)
