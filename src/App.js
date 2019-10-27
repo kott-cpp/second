@@ -10,6 +10,8 @@ import About from './components/About'
 import Contact from './components/Contact'
 import TodoApp from './components/TodoApp'
 import ThemeButton from './components/ThemeButton'
+import Poem from './components/Poem/PoemApp'
+import PoemWithReducer from './components/PoemWithReducer/PoemWithReducerApp'
 import Error from './components/Error'
 import Navigation from './components/Navigation'
 import Helmet from 'react-helmet'
@@ -49,6 +51,8 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/todoApp" component={TodoApp} />
             <Route path="/themeButton" component={ThemeButton} />
+            <Route path="/poem" component={Poem} />
+            <Route path="/poemWithReducer" component={PoemWithReducer} />
             <Route component={Error} />
           </Switch>
         </div>

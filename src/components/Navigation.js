@@ -35,6 +35,12 @@ const Navigation = () => {
       <Link to="/themeButton" className={'button'}>
         ThemeButton
       </Link>
+      <Link to="/poem" className={'button'}>
+        Poem
+      </Link>
+      <Link to="/poemWithReducer" className={'button'}>
+        PoemWithReducer
+      </Link>
     </div>
   )
 }

@@ -1,9 +1,18 @@
 import React from 'react'
+import './poem.css'
+import Poem from './Poem'
+import Store from './Store'
 
-export default function Poem(props) {
+function PoemApp() {
   return (
-    <div>
-      Roses are {props.color}, violets are {props.color}
-    </div>
+    <Store>
+      <div className={'poem'}>
+        <header className={'App-header'}>
+          <Poem />
+        </header>
+      </div>
+    </Store>
   )
 }
+
+export default PoemApp
