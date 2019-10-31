@@ -24,11 +24,11 @@ class LineChart extends Component {
     super(props)
     this.state = {
       chartData: {
-        labels: [...actualLabels],
+        labels: actualLabels,
         datasets: [
           {
             label: 'Actual',
-            data: [...actualData],
+            data: actualData,
 
             fill: 'false',
             borderColor: actualColor,
@@ -36,7 +36,7 @@ class LineChart extends Component {
           },
           {
             label: 'Goal',
-            data: [...goalData],
+            data: goalData,
             fill: 'false,',
             borderColor: goalColor,
             lineTension: 0,
