@@ -1,117 +1,106 @@
-import React, { Component } from 'react'
+import React, { useState, } from 'react'
 import ReactTable from 'react-table'
 import newTable from './newTable.css'
 import 'react-table/react-table.css'
 import ExportToExcel from './ExportToExcel'
+import kpiTableData from '../kpi_table.json'
+import '../styles/styles.css'
+console.log(kpiTableData)
 
-class NewTable extends Component {
-  constructor(props) {
-    super(props)
+let chartColors = { 
+  chartGood: {
+    backgroundColor: 'green',
+    color: 'var(--near-white)',},
+  chartNormal: {
+    backgroundColor:'blue',
+    color: 'var(--near-white)',},
+  chartWarning: {
+    backgroundColor: 'yellow',
+    color: 'var(--near-black',},
+  chartDanger: {
+    backgroundColor: 'red',
+    color: 'var(--near-white)',},
+};
 
-    this.state = {
-      posts: [],
-    }
-  }
+const NewTable = (props) => {
+  const [tableData, setTableData,] = useState({posts: kpiTableData,})
 
-  componentDidMount() {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    fetch(url, {
-      method: 'Get',
-    })
-      .then(response => response.json())
-      .then(posts => {
-        this.setState({ posts: posts })
-      })
-  }
+  let reactTable
 
-  deleteRow(id) {
-    const index = this.state.posts.findIndex(post => {
-      return post.id === id
-    })
-  }
-
-  render() {
-    const columns = [
-      {
-        Header: 'User ID',
-        accessor: 'userId',
-        style: {
-          textAlign: 'right',
-        },
-        width: 100,
-        maxWidth: 100,
-        minWidth: 100,
+  const columns = [
+    {
+      Header: 'Project Name',
+      accessor: 'project_name',
+      style: {
+        textAlign: 'left',
       },
-      {
-        Header: 'ID',
-        accessor: 'id',
-        style: {
-          textAlign: 'right',
-        },
-        width: 100,
-        maxWidth: 100,
-        minWidth: 100,
+      width: 500,
+      maxWidth: 500,
+      minWidth: 500,
+    },
+    {
+      Header: 'Start Date',
+      accessor: 'start_date',
+      style: {
+        textAlign: 'right',
       },
-      {
-        Header: 'Title',
-        accessor: 'title',
-        sortable: false,
-        filterable: false,
+      width: 100,
+      maxWidth: 100,
+      minWidth: 100,
+    },
+    {
+      Header: 'Completed Date',
+      accessor: 'completed_date',
+      sortable: false,
+      filterable: false,
+    },
+    {
+      Header: 'Contract Amount',
+      accessor: 'contract_amount',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'right',
       },
-      {
-        Header: 'Content',
-        accessor: 'body',
-        sortable: false,
-        filterable: false,
 
+    },
+    {
+      Header: 'Profit Percent',
+      accessor: 'profit_percent',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'center',
       },
-      {
-        Header: 'Actions',
-        Cell: props => {
-          return (
-            <button
-              style={{ backgroundColor: 'red', color: '#fefefe' }}
-              onClick={() => {
-                this.deleteRow(props.original.id)
-              }}
-            >
-              Delete
-            </button>
-          )
-        },
-        sortable: false,
-        filterable: false,
-        width: 100,
-        maxWidth: 100,
-        minWidth: 100,
-      },
-    ]
 
-    return (
-      <ReactTable
-        columns={columns}
-        data={this.state.posts}
-        filterable
-        defaultPageSize={5}
-        noDataText={'Please Wait...'}
-        // showPaginationTop
-        // showPaginationBottom={false}
-        // showPagination={false}
-      >
-        {(state, filteredData, instance) => {
-          this.reactTable = state.pageRows.map(post => {
-            return post._original
-          });
-          return (
-            <div>
-              {filteredData()}
-              <ExportToExcel posts={this.reactTable} />
-            </div>
-          )
-        }}
-      </ReactTable>
-    )
-  }
+    },
+  ]
+
+  return (
+    <ReactTable
+      columns={columns}
+      data={tableData.posts}
+      filterable
+      defaultPageSize={5}
+      noDataText={'Please Wait...'}
+      // showPaginationTop
+      // showPaginationBottom={false}
+      // showPagination={false}
+    >
+      {(state, filteredData, instance) => {
+        reactTable = state.pageRows.map(post => {
+          return post._original
+        });
+        return (
+          <div>
+            {filteredData()}
+            <ExportToExcel posts={reactTable} />
+          </div>
+        )
+      }}
+    </ReactTable>
+  )
 }
+
 
 export default NewTable

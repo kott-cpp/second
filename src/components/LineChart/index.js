@@ -4,6 +4,8 @@ import { Line } from 'react-chartjs-2'
 import customData from '../../../goals_over_time.json'
 console.log(customData)
 
+// const moment = require('moment');
+
 const strData = customData.STR.chart_data
 const strTitle = customData.STR.chart_title
 const actualColor = customData.STR.chart_styles[0].color
@@ -12,7 +14,7 @@ const goalColor = customData.STR.chart_styles[1].color
 const actualLabels = []
 const actualData = []
 const goalData = []
-
+// console.log('moment', moment().format('MMM YYYY'))
 for (let i = 0; i < strData.length; i++) {
   actualLabels.push(strData[i][0])
   actualData.push(strData[i][1])
@@ -32,6 +34,7 @@ class LineChart extends Component {
 
             fill: 'false',
             borderColor: actualColor,
+            backgroundColor: actualColor,
             lineTension: 0,
           },
           {
@@ -39,6 +42,7 @@ class LineChart extends Component {
             data: goalData,
             fill: 'false,',
             borderColor: goalColor,
+            backgroundColor: goalColor,
             lineTension: 0,
           },
         ],
@@ -60,7 +64,35 @@ class LineChart extends Component {
               text: strTitle,
               fontSize: 20,
             },
+            tooltips: {
+              mode: 'index',
+              intersect: false,
+              backgroundColor: 'white',
+              bodyFontColor: 'black',
+              borderColor: 'gray',
+              borderWidth: 1,
+              titleFontColor: 'black',
+            },
+            legend: {
+              display: true,
+              position: 'bottom',
+              labels: {
+                fontSize: 16,
+                height: 3,
+              },
+            },
             scales: {
+              xAxes: [
+                {
+                  type: 'time',
+                  time: {
+                    unit: 'month',
+                    displayFormats: {
+                      month: 'MMM YYYY',
+                    },
+                  },
+                },
+              ],
               yAxes: [
                 {
                   scaleLabel: {
@@ -75,7 +107,10 @@ class LineChart extends Component {
                       if (parseInt(value) >= 1000) {
                         return (
                           '$' +
-                          value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.00'
+                          value
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ',') +
+                          '.00'
                         )
                       } else {
                         return '$' + value + '.00'
