@@ -1,4 +1,4 @@
-import React, { useState, } from 'react'
+import React, { useState } from 'react'
 import ReactTable from 'react-table'
 import newTable from './newTable.css'
 import 'react-table/react-table.css'
@@ -7,23 +7,8 @@ import kpiTableData from '../kpi_table.json'
 import '../styles/styles.css'
 console.log(kpiTableData)
 
-let chartColors = { 
-  chartGood: {
-    backgroundColor: 'green',
-    color: 'var(--near-white)',},
-  chartNormal: {
-    backgroundColor:'blue',
-    color: 'var(--near-white)',},
-  chartWarning: {
-    backgroundColor: 'yellow',
-    color: 'var(--near-black',},
-  chartDanger: {
-    backgroundColor: 'red',
-    color: 'var(--near-white)',},
-};
-
-const NewTable = (props) => {
-  const [tableData, setTableData,] = useState({posts: kpiTableData,})
+const NewTable = props => {
+  const [tableData, setTableData] = useState({ posts: kpiTableData })
 
   let reactTable
 
@@ -53,6 +38,10 @@ const NewTable = (props) => {
       accessor: 'completed_date',
       sortable: false,
       filterable: false,
+      style: {
+        textAlign: 'right',
+      },
+      width: 150,
     },
     {
       Header: 'Contract Amount',
@@ -62,7 +51,7 @@ const NewTable = (props) => {
       style: {
         textAlign: 'right',
       },
-
+      width: 150,
     },
     {
       Header: 'Profit Percent',
@@ -72,7 +61,24 @@ const NewTable = (props) => {
       style: {
         textAlign: 'center',
       },
-
+    },
+    {
+      Header: 'Billed Percent',
+      accessor: 'billed_percent',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'center',
+      },
+    },
+    {
+      Header: 'Billed/Spent Percent',
+      accessor: 'billed_spent_percent',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'center',
+      },
     },
   ]
 
@@ -90,7 +96,7 @@ const NewTable = (props) => {
       {(state, filteredData, instance) => {
         reactTable = state.pageRows.map(post => {
           return post._original
-        });
+        })
         return (
           <div>
             {filteredData()}
@@ -101,6 +107,5 @@ const NewTable = (props) => {
     </ReactTable>
   )
 }
-
 
 export default NewTable
