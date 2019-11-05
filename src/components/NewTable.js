@@ -7,6 +7,26 @@ import kpiTableData from '../kpi_table.json'
 import '../styles/styles.css'
 console.log(kpiTableData)
 
+const PercentCell = props => {
+  const percentColor = {
+    profit_percent: 'spent_chart_class',
+    billed_percent: 'billed_chart_class',
+    billed_spent_percent: 'billed_spent_chart_class',
+  }
+  console.log('props_id', props)
+
+  const id = props.column['id'] //profit_percent
+  const chartClass = percentColor[id] //'spent_chart_class'
+  const value = props.original[id] //67.8
+  const rowClass = props.original[chartClass] //'chartGood'
+
+  return (
+    <span className={rowClass}>
+      {value}
+    </span>
+  )
+}
+
 const NewTable = props => {
   const [tableData, setTableData] = useState({ posts: kpiTableData })
 
@@ -58,27 +78,33 @@ const NewTable = props => {
       accessor: 'profit_percent',
       sortable: false,
       filterable: false,
+      Cell: PercentCell,
       style: {
         textAlign: 'center',
       },
+      width: 150,
     },
     {
       Header: 'Billed Percent',
       accessor: 'billed_percent',
       sortable: false,
       filterable: false,
+      Cell: PercentCell,
       style: {
         textAlign: 'center',
       },
+      width: 150,
     },
     {
       Header: 'Billed/Spent Percent',
       accessor: 'billed_spent_percent',
       sortable: false,
       filterable: false,
+      Cell: PercentCell,
       style: {
         textAlign: 'center',
       },
+      width: 150,
     },
   ]
 
@@ -87,8 +113,10 @@ const NewTable = props => {
       columns={columns}
       data={tableData.posts}
       filterable
-      defaultPageSize={5}
+      // pageSizeOptions={[7, 13 ,42]}
+      defaultPageSize={20}
       noDataText={'Please Wait...'}
+      className={'dither'}
       // showPaginationTop
       // showPaginationBottom={false}
       // showPagination={false}
