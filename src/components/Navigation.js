@@ -14,6 +14,9 @@ const Navigation = () => {
       <Link to="/newTable" className={'button'}>
         NewTable
       </Link>
+      <Link to="/kpiTable" className={'button'}>
+        KpiTable
+      </Link>
       <Link to="/pilotTable" className={'button'}>
         PilotTable
       </Link>

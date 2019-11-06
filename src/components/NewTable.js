@@ -13,7 +13,7 @@ const PercentCell = props => {
     billed_percent: 'billed_chart_class',
     billed_spent_percent: 'billed_spent_chart_class',
   }
-  console.log('props_id', props)
+  // console.log('props_id', props)
 
   const id = props.column['id'] //profit_percent
   const chartClass = percentColor[id] //'spent_chart_class'

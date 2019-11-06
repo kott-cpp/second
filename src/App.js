@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Pilot from './components/Pilot'
 import PilotTable from './components/PilotTable'
 import NewTable from './components/NewTable'
+import KpiTable from './components/KpiTable'
 import Films from './components/Films'
 import Chart from './components/Chart'
 import About from './components/About'
@@ -45,6 +46,7 @@ function App() {
             <Route path="/pilot" component={Pilot} />
             <Route path="/pilotTable" component={PilotTable} />
             <Route path="/newTable" component={NewTable} />
+            <Route path="/kpiTable" component={KpiTable} />
             <Route path="/films" component={Films} />
             <Route path="/chart" component={Chart} />
             <Route path="/about" component={About} />
