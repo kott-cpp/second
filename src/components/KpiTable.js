@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactTable from 'react-table'
+import cx from 'classnames'
 import kpiTable from './kpiTable.css'
 import 'react-table/react-table.css'
 import kpiTableData from '../kpi_table.json'
@@ -18,7 +19,7 @@ const PercentCell = props => {
   const value = props.original[id] //67.8
   const cellClass = props.original[chartClass] //'chartGood'
 
-  return <span className={cellClass}>{value}</span>
+  return <span className={cx(cellClass, 'spanCenter')}>{value}</span>
 }
 
 const KpiTable = props => {
@@ -34,6 +35,14 @@ const KpiTable = props => {
       accessor: 'start_date',
     },
     {
+      Header: 'Completed Date',
+      accessor: 'completed_date',
+    },
+    {
+      Header: 'Contract Amount',
+      accessor: 'contract_amount',
+    },
+    {
       Header: 'Profit Percent',
       accessor: 'profit_percent',
       Cell: PercentCell,
@@ -41,10 +50,12 @@ const KpiTable = props => {
     {
       Header: 'Billed Percent',
       accessor: 'billed_percent',
+      Cell: PercentCell,
     },
     {
       Header: 'Billed Spent Percent',
       accessor: 'billed_spent_percent',
+      Cell: PercentCell,
     },
   ]
 
@@ -55,6 +66,7 @@ const KpiTable = props => {
       filterable
       defaultPageSize={20}
       noDataText={'Please Wait...'}
+      className={'dither'}
     />
   )
 }

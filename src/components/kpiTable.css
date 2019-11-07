@@ -1,0 +1,63 @@
+.export {
+  color: beige;
+  background-color: green;
+  margin-top: 5px;
+  margin-left: 50%;
+}
+
+.chartGood {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand-success);
+  color: var(--near-white);
+  padding: var(--spacing-extra-extra-small);
+  margin: 0;
+  vertical-align: middle;
+}
+
+.chartNormal {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand-info);
+  color: var(--near-white);
+  padding: var(--spacing-extra-extra-small);
+  margin: 0;
+}
+
+.chartWarning {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand-warning);
+  color: var(--near-black);
+  padding: var(--spacing-extra-extra-small);
+  margin: 0;
+}
+
+.chartDanger {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand-danger);
+  color: var(--near-white);
+  padding: var(--spacing-extra-extra-small);
+  margin: 0;
+}
+
+.rt-tr > .rt-td:nth-child(5),
+.rt-tr > .rt-td:nth-child(6),
+.rt-tr > .rt-td:nth-child(7) {
+  padding: 0;
+  margin: 0;
+  vertical-align: center;
+}
+
+.dither .rt-tbody .rt-tr-group:nth-child(odd) .rt-tr {
+  background-color: var(--light-gray);
+}
+
+.spanCenter {
+  align-self: center;
+}

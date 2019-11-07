@@ -1,1 +1,59 @@
-{"chart_data":[["Profit Center","Contracts",{"role":"tooltip"}],["AQ - $3,527,525",3527525,"Share of Goal: 28%"],["STR - $4,489,337",4489337,"Share of Goal: 32%"],["ENV - $0",0,"Share of Goal: 0%"],["SOL - $2,438,481",2438481,"Share of Goal: 15%"],["AU - $1,772,158",1772158,"Share of Goal: 22%"]],"chart_styles":[{"color":"#C0504D"},{"color":"#71588F"},{"color":"#89A54E"},{"color":"#FFFF00","textStyle":{"color":"black"}},{"color":"#DB843D"},{"color":"#ff0000"}]}
+{
+  "chart_data": [
+    [
+      "Profit Center",
+      "Contracts",
+      {
+        "role": "tooltip"
+      }
+    ],
+    [
+      "AQ - $3,527,525",
+      3527525,
+      "Share of Goal: 28%"
+    ],
+    [
+      "STR - $4,489,337",
+      4489337,
+      "Share of Goal: 32%"
+    ],
+    [
+      "ENV - $0",
+      0,
+      "Share of Goal: 0%"
+    ],
+    [
+      "SOL - $2,438,481",
+      2438481,
+      "Share of Goal: 15%"
+    ],
+    [
+      "AU - $1,772,158",
+      1772158,
+      "Share of Goal: 22%"
+    ]
+  ],
+  "chart_styles": [
+    {
+      "color": "#C0504D"
+    },
+    {
+      "color": "#71588F"
+    },
+    {
+      "color": "#89A54E"
+    },
+    {
+      "color": "#FFFF00",
+      "textStyle": {
+        "color": "black"
+      }
+    },
+    {
+      "color": "#DB843D"
+    },
+    {
+      "color": "#ff0000"
+    }
+  ]
+}
