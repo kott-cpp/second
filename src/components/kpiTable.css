@@ -7,8 +7,6 @@
 
 .chartGood {
   display: inline-block;
-  width: 100%;
-  height: 100%;
   background-color: var(--brand-success);
   color: var(--near-white);
   padding: var(--spacing-extra-extra-small);
@@ -17,8 +15,6 @@
 
 .chartNormal {
   display: inline-block;
-  width: 100%;
-  height: 100%;
   background-color: var(--brand-info);
   color: var(--near-white);
   padding: var(--spacing-extra-extra-small);
@@ -27,8 +23,6 @@
 
 .chartWarning {
   display: inline-block;
-  width: 100%;
-  height: 100%;
   background-color: var(--brand-warning);
   color: var(--near-black);
   padding: var(--spacing-extra-extra-small);
@@ -37,21 +31,18 @@
 
 .chartDanger {
   display: inline-block;
-  width: 100%;
-  height: 100%;
   background-color: var(--brand-danger);
   color: var(--near-white);
   padding: var(--spacing-extra-extra-small);
   margin: 0;
 }
 
-.rt-tr > .rt-td:nth-child(5),
-.rt-tr > .rt-td:nth-child(6),
-.rt-tr > .rt-td:nth-child(7) {
-  padding: 0;
-  margin: 0;
-  text-align: center;
 
+.profitPercent,
+.billedPercent,
+.billedSpentPercent {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .dither .rt-tbody .rt-tr-group:nth-child(odd) .rt-tr {
@@ -59,5 +50,8 @@
 }
 
 .spanCenter {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

@@ -19,7 +19,7 @@ const PercentCell = props => {
   const value = props.original[id] //67.8
   const cellClass = props.original[chartClass] //'chartGood'
 
-  return <span className={cx(cellClass, 'spanCenter')}>{value}</span>
+  return <div className={cx(cellClass, 'spanCenter')}><span>{value}</span></div>
 }
 
 const KpiTable = props => {
@@ -44,16 +44,20 @@ const KpiTable = props => {
     },
     {
       Header: 'Profit Percent',
+      className: 'profitPercent',
       accessor: 'profit_percent',
       Cell: PercentCell,
     },
     {
       Header: 'Billed Percent',
+      className: 'billedPercent',
       accessor: 'billed_percent',
       Cell: PercentCell,
+
     },
     {
       Header: 'Billed Spent Percent',
+      className: 'billedSpentPercent',
       accessor: 'billed_spent_percent',
       Cell: PercentCell,
     },
