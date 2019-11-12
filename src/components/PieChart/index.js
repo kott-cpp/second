@@ -18,7 +18,7 @@ for (let i = 0; i < chartBColor.length; i++) {
 
 }
 
-for (let i = 1; i < pieChartData.chart_data.length; i++) {
+for (let i = 0; i < pieChartData.chart_data.length; i++) {
   pieLabels.push(chartData[i][0])
   pieData.push(chartData[i][1])
 }
