@@ -29,36 +29,73 @@ const KpiTable = props => {
     {
       Header: 'Project Name',
       accessor: 'project_name',
+      style: {
+        textAlign: 'left',
+      },
+      width: 500,
     },
     {
       Header: 'Start Date',
       accessor: 'start_date',
+      style: {
+        textAlign: 'right',
+      },
+      width: 100,
     },
     {
       Header: 'Completed Date',
       accessor: 'completed_date',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'right',
+      },
+      width: 150,
     },
     {
       Header: 'Contract Amount',
       accessor: 'contract_amount',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'right',
+      },
+      width: 150,
     },
     {
       Header: 'Profit Percent',
       className: 'profitPercent',
       accessor: 'profit_percent',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'right',
+      },
+      width: 150,
       Cell: PercentCell,
     },
     {
       Header: 'Billed Percent',
       className: 'billedPercent',
       accessor: 'billed_percent',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'right',
+      },
+      width: 150,
       Cell: PercentCell,
-
     },
     {
       Header: 'Billed Spent Percent',
       className: 'billedSpentPercent',
       accessor: 'billed_spent_percent',
+      sortable: false,
+      filterable: false,
+      style: {
+        textAlign: 'right',
+      },
+      width: 160,
       Cell: PercentCell,
     },
   ]
