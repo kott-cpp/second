@@ -1,21 +1,22 @@
-const yargs = require('yargs');
+#!/usr/bin/env node
+const yargs = require('yargs')
 const argv = yargs
-  .command("add", "Adds a new note", {
+  .command('add', 'Adds a new note', {
     title: {
-      describe: "Title of note",
-      alias: "t",
-      demandOption: true
+      describe: 'Title of note',
+      alias: 't',
+      demandOption: true,
     },
     body: {
-      describe: "Body of note",
-      alias: "b",
-      demandOption: "true"
-    }
+      describe: 'Body of note',
+      alias: 'b',
+      demandOption: true,
+    },
   })
 
-  .command("list", "List all notes")
+  .showHelpOnFail('It failed')
+  .command('list', 'List all notes')
   .help()
-  .alias("help", "h")
-  .argv;
+  .alias('help', 'h').argv
 
-console.log(argv);
+console.log(argv)
