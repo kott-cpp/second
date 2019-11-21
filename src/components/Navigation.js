@@ -44,6 +44,9 @@ const Navigation = () => {
       <Link to="/poemWithReducer" className={'button'}>
         PoemWithReducer
       </Link>
+      <Link to="/reactForm" className={'button'}>
+        ReactForm
+      </Link>
     </div>
   )
 }

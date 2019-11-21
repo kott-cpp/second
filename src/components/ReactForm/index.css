@@ -1,0 +1,13 @@
+.formCentered {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+.error {
+  color: red;
+  font-size: 10px;
+}
+
+.inputError {
+  border-color: red;
+}
