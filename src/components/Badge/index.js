@@ -29,7 +29,7 @@ Badge.propTypes = {
 }
 Badge.defaultProps = {
   theme: 'default',
-  size: 'medium',
+  size: 'badgeMedium',
 }
 
 export default Badge

@@ -14,25 +14,25 @@
     font-size: var(--badge-font-size);
 }
 
-.small {
+.badgeSmall {
     --badge-padding-horiz: var(--spacing-extra-small);
     --badge-padding-vert: var(--spacing-extra-extra-small);
     --badge-font-size: var(--font-size-1);
 }
 
-.medium {
+.badgeMedium {
     --badge-padding-horiz: var(--spacing-small);
     --badge-padding-vert: var(--spacing-extra-small);
     --badge-font-size: var(--font-size-2);
 }
 
-.large {
+.badgeLarge {
     --badge-padding-horiz: var(--spacing-small);
     --badge-padding-vert: var(--spacing-extra-small);
     --badge-font-size: var(--font-size-3);
 }
 
-.extraLarge {
+.badgeExtraLarge {
     --badge-padding-horiz: var(--spacing-small);
     --badge-padding-vert: var(--spacing-extra-small);
     --badge-font-size: var(--font-size-4);
