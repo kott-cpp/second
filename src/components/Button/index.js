@@ -30,9 +30,9 @@ Button.propTypes = {
   icon: PropTypes.string,
 }
 Button.defaultProps = {
-  theme: 'default',
+  theme: 'badgeDefault',
   Btn: 'button',
-  size: 'medium',
+  size: 'buttonMedium',
   icon: 'check',
 }
 

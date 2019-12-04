@@ -14,7 +14,7 @@
     font-size: var(--badge-font-size);
 }
 
-.badgeSmall {
+.small {
     --badge-padding-horiz: var(--spacing-extra-small);
     --badge-padding-vert: var(--spacing-extra-extra-small);
     --badge-font-size: var(--font-size-1);

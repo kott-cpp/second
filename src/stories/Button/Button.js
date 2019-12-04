@@ -4,8 +4,8 @@ import React from 'react'
 import './styles.css'
 import Button from '../../../src/components/Button'
 
-const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
-const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
+const buttonThemes = ['buttonDefault', 'buttonInfo', 'buttonSuccess', 'buttonWarning', 'buttonDanger']
+const buttonSizes = ['buttonSmall', 'buttonMedium', 'buttonLarge', 'buttonExtraLarge']
 const buttonIcons = ['circle-notch', 'cog', 'sync', 'spinner', 'hurricane']
 
 const ButtonStory = ({ className }) => (

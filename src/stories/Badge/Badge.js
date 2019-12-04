@@ -4,8 +4,8 @@ import React from 'react'
 import './styles.css'
 import Badge from '../../../src/components/Badge'
 
-const badgeThemes = ['default', 'info', 'success', 'warning', 'danger']
-const badgeSizes = ['small', 'medium', 'large', 'extraLarge']
+const badgeThemes = ['badgeDefault', 'badgeInfo', 'badgeSuccess', 'badgeWarning', 'badgeDanger']
+const badgeSizes = ['badgeSmall', 'badgeMedium', 'badgeLarge', 'badgeExtraLarge']
 
 const BadgeStory = ({ className }) => (
   <div className={cx(className, 'badge')}>

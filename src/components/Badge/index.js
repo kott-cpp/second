@@ -1,8 +1,8 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
-import './style.css'
-import './themes.css'
+import styles from './styles.module.css'
+import themes from './themes.module.css'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTimes } from '@fortawesome/pro-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -13,7 +13,7 @@ const setupIcons = () => {
 setupIcons()
 
 const Badge = ({ className, label, children, theme, size, icon }) => (
-  <span className={cx(className, 'badge', size, theme)}>
+  <span className={cx(className, styles.badge, styles[size], theme[theme])}>
     {children || label}
     {icon && <Icon icon={icon} />}
   </span>
@@ -28,7 +28,7 @@ Badge.propTypes = {
   icon: PropTypes.string,
 }
 Badge.defaultProps = {
-  theme: 'default',
+  theme: 'badgeDefault',
   size: 'badgeMedium',
 }
 
