@@ -1,8 +1,8 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
-import './style.css'
-import './themes.css'
+import styles from './style.module.css'
+import themes from './themes.module.css'
 import { wrapperShape } from '../../utils/prop-types'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTimes, faAngleDown } from '@fortawesome/pro-solid-svg-icons'
@@ -14,7 +14,7 @@ const setupIcons = () => {
 setupIcons()
 
 const Button = ({ className, label, children, theme, Btn, size, icon }) => (
-  <Btn className={cx(className, 'button', size, theme)}>
+  <Btn className={cx(className, styles.button, styles[size], themes[theme])}>
     <span className={'pr1'}> {children || label} </span>
     {icon && <Icon icon={icon} />}
   </Btn>

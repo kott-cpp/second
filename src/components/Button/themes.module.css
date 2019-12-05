@@ -13,7 +13,7 @@
   --button-border-width: 0;
   --button-border-style: solid;
 
-  border: var(--button-border-width) var(--button-border-style)
+  --buttonBorder: var(--button-border-width) var(--button-border-style)
     var(--button-border-color);
 }
 

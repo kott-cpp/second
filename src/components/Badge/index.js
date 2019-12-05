@@ -13,7 +13,7 @@ const setupIcons = () => {
 setupIcons()
 
 const Badge = ({ className, label, children, theme, size, icon }) => (
-  <span className={cx(className, styles.badge, styles[size], theme[theme])}>
+  <span className={cx(className, styles.badge, styles[size], themes[theme])}>
     {children || label}
     {icon && <Icon icon={icon} />}
   </span>

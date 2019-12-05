@@ -1,9 +1,9 @@
-.badgeBase,
-.badgeDefault,
-.badgeInfo,
-.badgeSuccess,
-.badgeWarning,
-.badgeDanger {
+.base,
+.default,
+.info,
+.success,
+.warning,
+.danger {
     --badge-border-color: var(--near-black);
     --badge-border-radius: 10rem;
     --badge-padding-horiz: var(--spacing-small);
@@ -15,27 +15,27 @@
       var(--badge-border-color);
 }
 
-.badgeDefault {
+.default {
     --badge-fg: var(--near-white);
     --badge-bg: var(--brand-default);
 }
 
-.badgeInfo {
+.info {
     --badge-fg: var(--near-white);
     --badge-bg: var(--brand-info);
 }
 
-.badgeSuccess {
+.success {
     --badge-fg: var(--near-black);
     --badge-bg: var(--brand-success);
 }
 
-.badgeWarning {
+.warning {
     --badge-fg: var(--near-black);
     --badge-bg: var(--brand-warning);
 }
 
-.badgeDanger {
+.danger {
     --badge-fg: var(--near-black);
     --badge-bg: var(--brand-danger);
 }

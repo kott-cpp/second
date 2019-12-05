@@ -17,7 +17,7 @@
   font-size: var(--button-font-size);
 }
 
-.buttonSmall {
+.small {
   --button-border-radius: var(--border-radius-1);
   --button-padding-horiz: var(--spacing-extra-small);
   --button-padding-vert: var(--spacing-extra-extra-small);
@@ -25,7 +25,7 @@
   --button-font-size: var(--font-size-2);
 }
 
-.buttonMedium {
+.medium {
   --button-border-radius: var(--border-radius-2);
   --button-padding-horiz: var(--spacing-small);
   --button-padding-vert: var(--spacing-extra-small);
@@ -33,7 +33,7 @@
   --button-font-size: var(--font-size-3);
 }
 
-.buttonLarge {
+.large {
   --button-border-radius: var(--border-radius-3);
   --button-padding-horiz: var(--spacing-small);
   --button-padding-vert: var(--spacing-extra-small);
@@ -41,7 +41,7 @@
   --button-font-size: var(--font-size-4);
 }
 
-.buttonExtraLarge {
+.extraLarge {
   --button-border-radius: var(--border-radius-3);
   --button-padding-horiz: var(--spacing-small);
   --button-padding-vert: var(--spacing-extra-small);
