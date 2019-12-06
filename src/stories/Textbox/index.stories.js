@@ -8,25 +8,26 @@ const story = storiesOf('Textbox')
 // added this for knobs
 story.addDecorator(withKnobs)
 story.add('Name', () => {
-  const style = { padding: 20 };
-  const name = text('Name', 'Kevin');
+  const style = { padding: 20 }
+  const name = text('Name', 'Kevin')
   const age = text('Age', 48)
 
   return (
     <div style={style}>
-      I am {name}.
-       I am {age} years old
+      <TextboxStory name={name} age={age} />
+      I am {name}. I am {age} years old
     </div>
   )
 })
 
 story.add('Default', () => {
-  const value = text('Name', 'Kevin');
+  const value = text('Name', 'Kevin')
+  const name = text('Name', 'Kevin')
+  const age = text('Age', 48)
 
-  return (<div>
-    <label>My Name: </label>
-    <input type="text" name="name" value={value} />
-  </div>)
-  {/*<TextboxStory/>*/}
-
+  return (
+    <div>
+      <TextboxStory name={name} age={age} />
+    </div>
+  )
 })

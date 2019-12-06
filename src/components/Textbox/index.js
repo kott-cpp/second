@@ -4,10 +4,10 @@ import styles from './styles.module.css'
 
 const value = ''
 
-const Textbox = () => (
+const Textbox = ({name, age}) => (
   <div>
     <label>My Name</label>
-    <input type="text" name="name" value={value} />
+    <input type="text" name="name" value={name} />
   </div>
 )
 

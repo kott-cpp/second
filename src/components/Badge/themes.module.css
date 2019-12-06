@@ -6,8 +6,6 @@
 .danger {
     --badge-border-color: var(--near-black);
     --badge-border-radius: 10rem;
-    --badge-padding-horiz: var(--spacing-small);
-    --badge-padding-vert: var(--spacing-extra-small);
     --badge-border-width: 0;
     --badge-border-style: solid;
 

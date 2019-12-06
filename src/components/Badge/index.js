@@ -6,20 +6,22 @@ import themes from './themes.module.css'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTimes } from '@fortawesome/pro-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { wrapperShape } from '../../utils/prop-types'
 
 const setupIcons = () => {
   library.add(faCheck, faTimes)
 }
 setupIcons()
 
-const Badge = ({ className, label, children, theme, size, icon }) => (
-  <span className={cx(className, styles.badge, styles[size], themes[theme])}>
+const Badge = ({ className, label, children, theme, size, icon, Bdg }) => (
+  <Bdg className={cx( styles.badge, styles[size], themes[theme], className)}>
     {children || label}
     {icon && <Icon icon={icon} />}
-  </span>
+  </Bdg>
 )
 
 Badge.propTypes = {
+  Bdg: wrapperShape,
   className: PropTypes.string,
   label: PropTypes.string,
   children: PropTypes.number,
@@ -28,8 +30,9 @@ Badge.propTypes = {
   icon: PropTypes.string,
 }
 Badge.defaultProps = {
-  theme: 'badgeDefault',
-  size: 'badgeMedium',
+  Bdg: 'span',
+  theme: 'default',
+  size: 'medium',
 }
 
 export default Badge
