@@ -30,13 +30,17 @@
 }
 
 .Toastify__toast--success {
-  background: var(--brand-success); }
+  background: var(--brand-success);
+}
 .Toastify__toast--warn {
-  background: var(--brand-warning); }
+  background: var(--brand-warning);
+}
 .Toastify__toast--info {
-  background: var(--brand-info); }
+  background: var(--brand-info);
+}
 .Toastify__toast--error {
-  background: var(--brand-danger); }
+  background: var(--brand-danger);
+}
 
 /*
 .danger > div {
@@ -88,7 +92,7 @@
   --button-border-style: solid;
 
   border: var(--button-border-width) var(--button-border-style)
-  var(--button-border-color);
+    var(--button-border-color);
 }
 
 .default {

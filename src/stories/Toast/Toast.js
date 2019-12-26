@@ -10,12 +10,10 @@ import './styles.css'
 const ToastStory = ({ className }) => {
   const notifyTl = () =>
     toast.success('Top-Left Success', { containerId: 'tl' })
-  const notifyTc = () =>
-    toast.error('Top-Center Danger', { containerId: 'tc' })
+  const notifyTc = () => toast.error('Top-Center Danger', { containerId: 'tc' })
   const notifyBr = () =>
     toast.warn('Bottom-Right Warning', { containerId: 'br' })
-  const notifyTr = () =>
-    toast.info('Top-Right Info', { containerId: 'tr' })
+  const notifyTr = () => toast.info('Top-Right Info', { containerId: 'tr' })
   const notifyBc = () =>
     toast('This is on the Bottom-Center', { containerId: 'bc' })
   const notifyBl = () =>
@@ -56,12 +54,42 @@ const ToastStory = ({ className }) => {
           position={toast.POSITION.BOTTOM_LEFT}
         />
 
-        <button onClick={notifyTl} className={cx('button medium success toastSpacing')}>Top Left</button>
-        <button onClick={notifyTc} className={cx('button medium danger toastSpacing')}>Top Center</button>
-        <button onClick={notifyTr} className={cx('button medium info toastSpacing')}>Top Right</button>
-        <button onClick={notifyBr} className={cx('button medium warning toastSpacing')}>Bottom Right</button>
-        <button onClick={notifyBc} className={cx('button medium success toastSpacing')}>Bottom Center</button>
-        <button onClick={notifyBl} className={cx('button medium warning toastSpacing')}>Bottom Left</button>
+        <button
+          onClick={notifyTl}
+          className={cx('button medium success toastSpacing')}
+        >
+          Top Left
+        </button>
+        <button
+          onClick={notifyTc}
+          className={cx('button medium danger toastSpacing')}
+        >
+          Top Center
+        </button>
+        <button
+          onClick={notifyTr}
+          className={cx('button medium info toastSpacing')}
+        >
+          Top Right
+        </button>
+        <button
+          onClick={notifyBr}
+          className={cx('button medium warning toastSpacing')}
+        >
+          Bottom Right
+        </button>
+        <button
+          onClick={notifyBc}
+          className={cx('button medium success toastSpacing')}
+        >
+          Bottom Center
+        </button>
+        <button
+          onClick={notifyBl}
+          className={cx('button medium warning toastSpacing')}
+        >
+          Bottom Left
+        </button>
       </div>
     </div>
   )
