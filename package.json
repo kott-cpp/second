@@ -25,6 +25,7 @@
     "classnames": "^2.2.6",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
+    "griddle-react": "^1.13.1",
     "lorem-ipsum": "^2.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
