@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 
 // toast.configure() //(remove ToastContainer from import and div to use this)
 
@@ -15,6 +16,10 @@ const Home = () => {
     <div>
       <div>
         <p>Home</p>
+      </div>
+      <div>
+        <span className="fab fa-facebook-f">
+        </span>
       </div>
       <div>
         <ToastContainer
