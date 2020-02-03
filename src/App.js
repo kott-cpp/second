@@ -14,7 +14,7 @@ import ThemeButton from './components/ThemeButton'
 import Poem from './components/Poem/PoemApp'
 import PoemWithReducer from './components/PoemWithReducer/PoemWithReducerApp'
 import ReactForm from './components/ReactForm/reactFormApp'
-import GriddleTable from './components/GriddleTable/GriddleTable'
+import Index from './components/GriddleTable'
 import Error from './components/Error'
 import Navigation from './components/Navigation'
 import Helmet from 'react-helmet'
@@ -58,7 +58,7 @@ function App() {
             <Route path="/poem" component={Poem} />
             <Route path="/poemWithReducer" component={PoemWithReducer} />
             <Route path="/reactForm" component={ReactForm} />
-            <Route path="/griddleTable" component={GriddleTable} />
+            <Route path="/griddleTable" component={Index} />
             <Route component={Error} />
           </Switch>
         </div>
